@@ -1,0 +1,58 @@
+{
+  "name": "frontpoderosanoparto",
+  "version": "0.1.1",
+  "description": "Aplicação que auxilia gestantes na hora do parto",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^13.1.2",
+    "axios": "^0.21.1",
+    "date-fns": "^2.20.3",
+    "js-cookie": "^2.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3",
+    "styled-components": "^5.2.3",
+    "web-vitals": "^1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fenix26/frontPoderosaNoParto.git"
+  },
+  "keywords": [
+    "Poderosa",
+    "Gestante",
+    "parto"
+  ],
+  "author": "Luiz Junior Lopes",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "rupture": "^0.7.1"
+  }
+}
