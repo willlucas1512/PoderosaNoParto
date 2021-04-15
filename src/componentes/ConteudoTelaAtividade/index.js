@@ -57,7 +57,7 @@ function ConteudoTelaAtividade() {
     return (
         <div>
 
-            {console.log(token)}
+
             <S.Container >
                 <S.LeftSide >
                     <label>Olá, {nomeUsuario}</label>

@@ -1,18 +1,19 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import * as S from './styles.js'
 import StoreContext from './../../componentes/Store/Context'
-
+import api from '../../services/api';
 //nossos componentes
 import Header from '../../componentes/Header/HeaderTelasMenu'
 import Footer from '../../componentes/Footer'
 
 import ConteudoTelaAtividade from '../../componentes/ConteudoTelaAtividade';
+import { GiTrumpet } from 'react-icons/gi';
 
 function TelaAtividade() {
 
-    const { setRespiracaoSuperficialDoDia } = useContext(StoreContext);
-    const { setRespiracaoProfundaDoDia } = useContext(StoreContext);
-    const { setRelaxamentoDoDia } = useContext(StoreContext);
+    const { respiracaoSuperficialDoDia, setRespiracaoSuperficialDoDia } = useContext(StoreContext);
+    const { respiracaoProfundaDoDia, setRespiracaoProfundaDoDia } = useContext(StoreContext);
+    const { relaxamentoDoDia, setRelaxamentoDoDia } = useContext(StoreContext);
 
     const { setNumeroTarefasPendentes } = useContext(StoreContext);
 
@@ -22,13 +23,79 @@ function TelaAtividade() {
     var tarefaRespiracaoSuperficialDoDia
     var tarefaRespiracaoProfundaDoDia
     var tarefaRelaxamentoDoDia
-    var respiracaoSuperficialDoDia = false
-    var respiracaoProfundaDoDia = false
-    var relaxamentoDoDia = false
 
-    setRespiracaoSuperficialDoDia(respiracaoSuperficialDoDia);
-    setRespiracaoProfundaDoDia(respiracaoProfundaDoDia);
-    setRelaxamentoDoDia(relaxamentoDoDia);
+
+    const { cpf } = useContext(StoreContext);
+
+
+
+    async function loadTasks() {
+
+        await api.get(`/task/exercicioDoDia/${cpf}/${"Respiracao Superficial"}`)
+            .then(response => {
+                if (response.data !== null) {
+                    setRespiracaoSuperficialDoDia(true);
+                    console.log(true)
+                }
+                else {
+                    setRespiracaoSuperficialDoDia(false);
+                    console.log(false)
+
+                }
+
+
+            }
+
+
+            )
+
+        await api.get(`/task/exercicioDoDia/${cpf}/${"Respiracao Profunda"}`)
+            .then(response => {
+                if (response.data !== null) {
+                    setRespiracaoProfundaDoDia(true);
+                    console.log(true)
+                }
+                else {
+                    setRespiracaoProfundaDoDia(false);
+                    console.log(false)
+
+                }
+
+
+            }
+
+
+            )
+
+
+        await api.get(`/task/exercicioDoDia/${cpf}/${"Relaxamento"}`)
+            .then(response => {
+                if (response.data !== null) {
+                    setRelaxamentoDoDia(true);
+                    console.log(true)
+                }
+                else {
+                    setRelaxamentoDoDia(false);
+                    console.log(false)
+
+                }
+
+
+            }
+
+
+            )
+
+
+    }
+
+    useEffect(() => {
+        loadTasks();
+
+
+
+    }, [1, loadTasks])
+
 
     if (respiracaoSuperficialDoDia == false) {
         tarefaRespiracaoSuperficialDoDia = 1
