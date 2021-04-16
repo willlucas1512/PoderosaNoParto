@@ -1,11 +1,17 @@
 import React, { useContext } from 'react';
 import * as S from './styles.js'
-import Image from '../../assets/iconeProgressoExcelente.png'
+
+
+import ProgressoFraco from '../../assets/iconeProgressofraco.png'
+import ProgressoBom from '../../assets/iconeProgressoBom.png'
+import ProgressoRegular from '../../assets/iconeProgressoRegular.png'
+import ProgressoExcelente from '../../assets/iconeProgressoExcelente.png'
+
 import iconeRespiracao from '../../assets/iconePretoRespiracao2.png'
 import CartoesExercicios from './../CartoesExerciciosTelaAtividade'
 import * as MdIcons from "react-icons/md";
 import StoreContext from './../Store/Context';
-function ConteudoTelaAtividade() {
+function ConteudoTelaAtividade(props) {
 
     const { token, nomeUsuario } = useContext(StoreContext);
     const { respiracaoSuperficialDoDia } = useContext(StoreContext);
@@ -54,6 +60,28 @@ function ConteudoTelaAtividade() {
         mes = "12"
     }
 
+    function image(tarefaPendentes) {
+        console.log(tarefaPendentes)
+        if (tarefaPendentes === 3) {
+            return ProgressoFraco
+        } else if (tarefaPendentes == 2) {
+
+            return ProgressoRegular
+
+        } else if (tarefaPendentes === 1) {
+            return ProgressoBom
+
+        } else {
+            return ProgressoExcelente
+
+        }
+
+    }
+
+
+
+
+
     return (
         <div>
 
@@ -61,7 +89,7 @@ function ConteudoTelaAtividade() {
             <S.Container >
                 <S.LeftSide >
                     <label>Olá, {nomeUsuario}</label>
-                    <img src={Image} alt="Imagem Progresso Excelente" />
+                    <img src={image(props.tarefasPendentes)} alt="Imagem Progresso Excelente" />
                 </S.LeftSide>
                 <S.RigthSide
                     respiracaoSuperficialDoDia={respiracaoSuperficialDoDia}

@@ -17,6 +17,7 @@ function Login() {
     const { setCpf } = useContext(StoreContext);
     const { setNomeUsuario } = useContext(StoreContext);
     const history = useHistory();
+
     console.log(token)
 
     function onChange(event) {
@@ -41,13 +42,14 @@ function Login() {
                 setNomeUsuario(response.data.nomeUsuario)
                 setIdUsuario(response.data.idUsuario)
                 setValues(initialState)
+                console.log(token)
                 return history.push('/TelaAtividade')
 
 
             })
             .catch(e => {
                 console.log("Erro ao cadastrar")
-                setToken(null)
+
             });
 
     }

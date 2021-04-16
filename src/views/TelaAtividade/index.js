@@ -16,8 +16,8 @@ function TelaAtividade() {
     const { relaxamentoDoDia, setRelaxamentoDoDia } = useContext(StoreContext);
 
     const { setNumeroTarefasPendentes } = useContext(StoreContext);
-
-
+    const { token } = useContext(StoreContext);
+    console.log(token)
 
     var numeroTarefasPendentes
     var tarefaRespiracaoSuperficialDoDia
@@ -126,7 +126,7 @@ function TelaAtividade() {
         <S.Container >
 
             <Header />
-            <ConteudoTelaAtividade />
+            <ConteudoTelaAtividade tarefasPendentes={numeroTarefasPendentes} />
 
             <Footer />
         </S.Container>

@@ -39,8 +39,8 @@ function Navbar() {
                             </Link>
 
 
-                            <Link to={'/'} >
-                                {setToken(null)}
+                            <Link to={'/'} onClick={() => setToken(null)} >
+
                                 <a > <AiIcons.AiOutlineExport /></a>
                                 <span >{'Sair'}</span>
                             </Link>

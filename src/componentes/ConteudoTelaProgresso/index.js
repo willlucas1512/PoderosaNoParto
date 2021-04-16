@@ -15,13 +15,14 @@ function ConteudoTelaProgresso() {
     const { cpf } = useContext(StoreContext);
     const { token } = useContext(StoreContext);
 
+    if (token === null) {
+
+        window.location.replace("/")
+
+    }
+
 
     async function loadTasks() {
-
-
-
-
-
 
         await api.get(`/task/filter/${filterActived}/${cpf}`)
             .then(response => {
@@ -38,11 +39,9 @@ function ConteudoTelaProgresso() {
 
 
     }, [filterActived, loadTasks])
-    if (token === null) {
-        console.log(token)
-        //   window.location.replace("/")
 
-    }
+
+
     return (<div >
         <S.Container >
 
@@ -80,7 +79,7 @@ function ConteudoTelaProgresso() {
                                         finalizada={t.finalizada}
                                     />
 
-                                ))
+                                )).reverse()
                             }
 
                         </S.Scroll>
