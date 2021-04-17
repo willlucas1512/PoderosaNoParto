@@ -18,8 +18,7 @@ function Login() {
     const { setNomeUsuario } = useContext(StoreContext);
     const history = useHistory();
 
-    console.log(token)
-
+    //Função onChange atualizaos valores dos inputs 
     function onChange(event) {
         const { value, name } = event.target;
 
@@ -29,6 +28,8 @@ function Login() {
         });
     }
 
+    //Função onSubmit envia os valores dos inputs
+    // para o banco de dados
     async function onSubmit(event) {
 
         event.preventDefault();

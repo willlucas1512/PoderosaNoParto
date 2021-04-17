@@ -8,7 +8,7 @@ import { IconContext } from 'react-icons';
 import * as S from './styles.js'
 import StoreContext from './../Store/Context'
 
-function IconNavBar(props) {
+function BellNavBar(props) {
     const [sidebar, setSidebar] = useState(false);
 
     const showSidebar = () => setSidebar(!sidebar); //BsFillBellFill
@@ -16,6 +16,7 @@ function IconNavBar(props) {
     const { respiracaoProfundaDoDia } = useContext(StoreContext);
     const { relaxamentoDoDia } = useContext(StoreContext);
     return (
+
         <S.Container
             respiracaoSuperficialDoDia={respiracaoSuperficialDoDia}
             respiracaoProfundaDoDia={respiracaoProfundaDoDia}
@@ -68,4 +69,4 @@ function IconNavBar(props) {
     );
 }
 
-export default IconNavBar;
+export default BellNavBar;

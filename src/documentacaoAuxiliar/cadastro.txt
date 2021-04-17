@@ -1,0 +1,39 @@
+A Tela Home
+
+1 - Importações
+React 
+HeaderTelaHome
+Footer
+ConteudoTelaHome
+
+2 - Estrutura
+
+A tela home é composto por uma classe que contem os componentes:
+
+2.1 -HeaderTelaHome
+
+Possui um logo e tres links
+
+logo com o nome do projeto
+link Home permanece na pagina
+link Sobre o projeto direciona para a pagina na web onde esta o curso
+link Fale com a gente terá links para Contato
+
+2.2 ConteudoTelaHome
+
+Imagem principal
+Componente Login
+
+2.2.1 Login
+recebe o formulario de login, verifica no BD e redireciona
+
+2.2 Footer
+Possui dois links
+TermosECondições
+
+
+  
+
+
+
+

@@ -2,7 +2,7 @@ import React from 'react';
 import * as S from './styles.js'
 import logo from '../../../assets/logo.png'
 
-function Header() {
+function HeaderTelaHome() {
     return (
         <div>
             <S.Container>
@@ -22,4 +22,4 @@ function Header() {
 
 }
 
-export default Header;
+export default HeaderTelaHome;

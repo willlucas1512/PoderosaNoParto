@@ -3,7 +3,7 @@ import * as S from './styles.js'
 import logo from '../../../assets/logo.png'
 import StoreContext from './../../Store/Context'
 import Navbar from './../../MenuNavBar';
-import IconNavBar from './../../IconNavBar';
+import BellNavBar from './../../BellNavBar';
 function HeaderTelasMenu() {
 
     const { numeroTarefasPendentes } = useContext(StoreContext);
@@ -20,7 +20,7 @@ function HeaderTelasMenu() {
                 </S.LeftSide>
                 <S.RightSide>
 
-                    <IconNavBar numeroTarefasPendentes={numeroTarefasPendentes} />
+                    <BellNavBar numeroTarefasPendentes={numeroTarefasPendentes} />
                     <Navbar />
 
                 </S.RightSide>

@@ -101,21 +101,21 @@ function ConteudoTelaAtividade(props) {
                     <label>Atividades do dia {dia + "/" + mes + "/" + ano}</label>
                     <div id="respiracaoSuperficial" >
                         <button type="button" onClick={() => { window.location.replace("TelaRespiracaoSuperficial") }}   >
-                            <CartoesExercicios exercicio={"Respiração Superficial"} icone={iconeRespiracao} />
+                            <CartoesExercicios exercicio={"Respiração Superficial"} />
                         </button>
                     </div>
 
 
                     <div id="respiracaoProfunda" >
                         <button type="button" onClick={() => { window.location.replace("TelaRespiracaoProfunda") }}>
-                            <CartoesExercicios exercicio={"Respiração Profunda"} icone={iconeRespiracao} />
+                            <CartoesExercicios exercicio={"Respiração Profunda"} />
                         </button>
 
                     </div>
                     <div id="relaxamentoDoDia" >
 
                         <button type="button" onClick={() => { window.location.replace("TelaRelaxamento") }} >
-                            <CartoesExercicios exercicio={"Relaxamento"} icone={iconeRespiracao} />
+                            <CartoesExercicios exercicio={"Relaxamento"} />
                         </button>
                     </div>
 

@@ -1,0 +1,39 @@
+A Tela Cadastro
+
+1 - Importações
+
+React 
+HeaderTelaCadastro
+Footer
+ConteudoTelaCadastro
+
+2 - Estrutura
+
+A tela home é composto por uma classe que contem os componentes:
+
+2.1 -HeaderTelaCadastro
+
+Possui um logo e tres links
+
+link Home direciona para pagina Home
+
+
+2.2 ConteudoTelaCadastro
+
+
+2.2.1 Componente Cadastro
+recebe o formulario de Cadastro, cadastra no BD e redireciona para Home
+
+2.2 Footer
+
+Possui dois links
+
+TermosECondições
+Politicade Privacidade
+
+
+  
+
+
+
+

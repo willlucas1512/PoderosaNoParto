@@ -3,7 +3,7 @@ import * as S from './styles.js'
 
 
 //nossos componentes
-import Header from '../../componentes/Header/HeaderTelaHome'
+import HeaderTelaHome from '../../componentes/Header/HeaderTelaHome'
 import Footer from '../../componentes/Footer'
 import ConteudoTelaHome from '../../componentes/ConteudoTelaHome'
 
@@ -12,7 +12,7 @@ class Home extends React.Component {
         return (
 
             <S.Container >
-                <Header />
+                <HeaderTelaHome />
                 <ConteudoTelaHome />
                 <Footer />
             </S.Container>

@@ -59,11 +59,10 @@ function ConteudoTelaCadastro() {
 
                 });
 
-                console.log(response.data);
                 window.location.replace("/")
             })
             .catch(e => {
-                console.log("Erro ao cadastrar");
+                console.log("Erro ao cadastrar");//tratar erro e fazer popup
             });
 
 
