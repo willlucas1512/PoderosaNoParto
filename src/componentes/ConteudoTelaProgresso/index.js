@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import * as S from './styles.js'
 import FilterCardProgresso from '../FilterCardProgresso'
 import CartoesExerciciosProgresso from '../CartoesExerciciosProgresso'
+import GraficoTelaProgresso from '../GraficoTelaProgresso'
 import grafico from '../../assets/grafico.png'
 import iconeRespiracao from '../../assets/iconePretoRespiracao.png'
 import api from '../../services/api';
@@ -91,7 +92,8 @@ function ConteudoTelaProgresso() {
 
                         <S.RightSideCentro >
                             <    h1 > Estatísticas </h1>
-                            <img src={grafico} alt="Gráfico das tarefas" />
+                            <GraficoTelaProgresso alt="Gráfico das tarefas" />
+
                         </S.RightSideCentro>
 
                     </S.Centro>

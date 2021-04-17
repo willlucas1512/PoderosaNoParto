@@ -49,7 +49,7 @@ function Login() {
 
             })
             .catch(e => {
-                console.log("Erro ao cadastrar")
+                console.log("Erro ao cadastrar aqui")
 
             });
 
