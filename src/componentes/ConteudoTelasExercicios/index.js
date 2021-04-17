@@ -7,6 +7,7 @@ class ConteudoTelasExercicios extends React.Component {
 
     static contextType = StoreContext
 
+
     constructor(props) {
         super(props);
         this.state = {
@@ -47,12 +48,15 @@ class ConteudoTelasExercicios extends React.Component {
 
         const idUsuario = this.context.idUsuario
         const cpf = this.context.cpf
+        const date = new Date()
+        const datamenosfuso = new Date(date.valueOf() - date.getTimezoneOffset() * 60000)
+        const dataConvertida = datamenosfuso.toISOString().replace(/\ .\d{3}Z$/, '')
 
         var data = {
             titulo: titulo,
             cpf: cpf,
             duracao: duracao,
-            finalizada: Date.now(),//arrumar fuso
+            finalizada: dataConvertida,
             usuarioDaTarefa: idUsuario,
 
         };

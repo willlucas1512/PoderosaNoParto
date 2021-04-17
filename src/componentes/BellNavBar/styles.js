@@ -70,7 +70,7 @@ flex-direction:column;
 
 .nav-text a {
     text-decoration: none;
-      color: #A54786;
+      color: #6D3E5D;
     font-size: 25px;
     width: 95%;
     height: 100%;
@@ -117,7 +117,7 @@ margin-left:-130px;
 }
 span:hover{
 
-  color:#DAA520;
+  color:#C79518;
 
 }
 

@@ -4,10 +4,11 @@ import * as S from './styles.js'
 import * as GiIcons from 'react-icons/gi';
 import * as MdIcons from "react-icons/md";
 
-function CartoesExercicios({ titulo, duracao, finalizada }) {
+function CartoesExerciciosProgresso({ titulo, duracao, finalizada }) {
     const date = useMemo(() => format(new Date(finalizada), 'dd/MM/yyyy'));
 
     function iconeExercicio() {
+
         if (titulo === "Relaxamento")
             return <MdIcons.MdAirlineSeatReclineExtra size="35" />
         else
@@ -18,6 +19,7 @@ function CartoesExercicios({ titulo, duracao, finalizada }) {
     }
 
     return (
+
         <div>
             <S.Container>
 
@@ -56,4 +58,4 @@ function CartoesExercicios({ titulo, duracao, finalizada }) {
 
 }
 
-export default CartoesExercicios;
+export default CartoesExerciciosProgresso;

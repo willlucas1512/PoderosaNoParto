@@ -7,8 +7,8 @@ align-items:center;
 
 width: 100%;//1920px;
 height: 100px;
-background:#A54786;
-border-bottom: 10px solid #DAA520;
+background:#6D3E5D;
+border-bottom: 10px solid #C79518;
 display:flex;
 position:relative;
 
@@ -54,7 +54,7 @@ align-items: center;
 
 .dividir::after{
     content:"|"; 
- color: #DAA520;
+ color: #C79518;
 margin:0 1px;
 font-size:30px;
 font-style:arial;
@@ -62,7 +62,7 @@ padding:1px;
 
 };
 a{
-color:#A54786;
+color:#6D3E5D;
 font-weight: bold;
 text-decoration:none;
 margin: 0px 5px;
@@ -71,7 +71,7 @@ font-style:arial;
 
 &:hover{
     
-color: #DAA520;
+color: #C79518;
 }
 
 };

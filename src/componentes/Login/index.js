@@ -34,7 +34,7 @@ function Login() {
 
         event.preventDefault();
 
-        await api.post("/user/" + `${values.cpf}`)
+        await api.post("/user/" + `${values.cpf}` + "/" + `${values.senha}`)
 
             .then((response) => {
 

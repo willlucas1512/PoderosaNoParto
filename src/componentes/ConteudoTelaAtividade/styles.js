@@ -85,7 +85,7 @@ width:960px;
     margin-bottom:90px;
     font-weight: bold;
     text-shadow: 0.1em 0.1em 0.2em rgba(112,112,112,0.5);
-    color:#A54786;
+    color:#6D3E5D;
 
 
 
@@ -116,7 +116,7 @@ width:960px;
   margin-bottom:20px;
   border: none;
   cursor:pointer;
-  background:#A54786;
+  background:#6D3E5D;
   border:solid rgba(112,112,112,0.2);
   display:flex;
 
@@ -127,7 +127,7 @@ width:960px;
   }
   .btnAdicionarAtividade:hover{
     
-    background:#DAA520;
+    background:#C79518;
 
   }
 

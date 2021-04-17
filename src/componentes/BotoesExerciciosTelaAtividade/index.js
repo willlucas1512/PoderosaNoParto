@@ -3,7 +3,7 @@ import * as S from './styles.js'
 import * as GiIcons from 'react-icons/gi';
 import * as MdIcons from "react-icons/md";
 
-function CartoesExerciciosTelaAtividade(props) {
+function BotoesExerciciosTelaAtividade(props) {
 
     function iconeExercicio() {
         if (props.exercicio == "Relaxamento")
@@ -28,4 +28,4 @@ function CartoesExerciciosTelaAtividade(props) {
 
 }
 
-export default CartoesExerciciosTelaAtividade;
+export default BotoesExerciciosTelaAtividade;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import * as S from './styles.js'
-import FilterCard from '../FilterCard'
-import CartoesExercicios from '../CartoesExercicios'
+import FilterCardProgresso from '../FilterCardProgresso'
+import CartoesExerciciosProgresso from '../CartoesExerciciosProgresso'
 import grafico from '../../assets/grafico.png'
 import iconeRespiracao from '../../assets/iconePretoRespiracao.png'
 import api from '../../services/api';
@@ -42,62 +42,64 @@ function ConteudoTelaProgresso() {
 
 
 
-    return (<div >
-        <S.Container >
+    return (
 
-            <S.Progresso >
+        <div >
+            <S.Container >
 
-                <S.TopSide >
-                    <  button type="button" onClick={() => setFilterActived("week")} >
-                        <        FilterCard title="Semana" actived={filterActived == "week"} />
+                <S.Progresso >
 
-                    </button>
-                    <button type="button" onClick={() => setFilterActived("month")} >
-                        <FilterCard title="Mês" actived={filterActived == "month"} />
+                    <S.TopSide >
+                        <  button type="button" onClick={() => setFilterActived("week")} >
+                            <        FilterCardProgresso title="Semana" actived={filterActived == "week"} />
 
-                    </button>
-                    <button type="button" onClick={() => setFilterActived("all")} >
-                        <FilterCard title="Geral" actived={filterActived == "all"} />
+                        </button>
+                        <button type="button" onClick={() => setFilterActived("month")} >
+                            <FilterCardProgresso title="Mês" actived={filterActived == "month"} />
 
-                    </button>
+                        </button>
+                        <button type="button" onClick={() => setFilterActived("all")} >
+                            <FilterCardProgresso title="Geral" actived={filterActived == "all"} />
 
-                </S.TopSide>
-                < S.divisao > _____________________________________________________________________________________________________________________________________________________________________________ </S.divisao>
+                        </button>
 
-                <S.Centro >
-                    <S.LeftSideCentro >
-                        < h1 > Atividades Realizadas </h1>
+                    </S.TopSide>
+                    < S.divisao > _____________________________________________________________________________________________________________________________________________________________________________ </S.divisao>
 
-                        <S.Scroll >
+                    <S.Centro >
+                        <S.LeftSideCentro >
+                            < h1 > Atividades Realizadas </h1>
 
-                            {
-                                tasks.map(t => (
+                            <S.Scroll >
 
-                                    < CartoesExercicios icone={iconeRespiracao}
-                                        titulo={t.titulo}
-                                        duracao={t.duracao}
-                                        finalizada={t.finalizada}
-                                    />
+                                {
+                                    tasks.map(t => (
 
-                                )).reverse()
-                            }
+                                        < CartoesExerciciosProgresso icone={iconeRespiracao}
+                                            titulo={t.titulo}
+                                            duracao={t.duracao}
+                                            finalizada={t.finalizada}
+                                        />
 
-                        </S.Scroll>
+                                    )).reverse()
+                                }
+
+                            </S.Scroll>
 
 
-                    </S.LeftSideCentro>
+                        </S.LeftSideCentro>
 
-                    <S.RightSideCentro >
-                        <    h1 > Estatísticas </h1>
-                        <img src={grafico} alt="Gráfico das tarefas" />
-                    </S.RightSideCentro>
+                        <S.RightSideCentro >
+                            <    h1 > Estatísticas </h1>
+                            <img src={grafico} alt="Gráfico das tarefas" />
+                        </S.RightSideCentro>
 
-                </S.Centro>
+                    </S.Centro>
 
-            </S.Progresso>
+                </S.Progresso>
 
-        </S.Container>
-    </div>
+            </S.Container>
+        </div>
     )
 
 }

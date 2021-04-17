@@ -41,7 +41,7 @@ export const TopSide = styled.div`
       font-size:60px;
       font-weight: bold;
       text-shadow: 0.1em 0.1em 0.2em rgba(112,112,112,0.5);//#707070 cinza
-      color:#A54786;
+      color:#6D3E5D;
    }
 
 
@@ -175,13 +175,15 @@ export const BottomSide = styled.div`
       border:none;
       border-radius:40px;
       box-shadow:10px 30px 90px rgba(112,112,112,0.2);
-      background:rgba(0, 0, 249, 0.5);//azul
+      background:#6D3E5D;
       color: white;
       font-size:25px;
       cursor:pointer;
    };
 
-
+   .btnCadastrar:hover{
+      background:#C79518;
+   };
 
 `
 

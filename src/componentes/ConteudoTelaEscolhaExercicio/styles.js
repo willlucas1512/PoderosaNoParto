@@ -53,7 +53,7 @@ button{
 
     border-radius: 30px;
 font-size:40px;
-background:rgba(0, 0, 249, 0.5);//azul
+background:#6D3E5D;//#6D3E5D;
 color:white;
 //margin-left:-10px;
 width:570px;
@@ -76,7 +76,7 @@ button:hover{
 
     
 
-background:#DAA520;
+background:#C79518;
 
 
 }

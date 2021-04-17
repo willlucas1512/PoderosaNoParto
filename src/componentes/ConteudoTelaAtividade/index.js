@@ -8,7 +8,7 @@ import ProgressoRegular from '../../assets/iconeProgressoRegular.png'
 import ProgressoExcelente from '../../assets/iconeProgressoExcelente.png'
 
 import iconeRespiracao from '../../assets/iconePretoRespiracao2.png'
-import CartoesExercicios from './../CartoesExerciciosTelaAtividade'
+import BotoesExercicios from './../BotoesExerciciosTelaAtividade'
 import * as MdIcons from "react-icons/md";
 import StoreContext from './../Store/Context';
 function ConteudoTelaAtividade(props) {
@@ -17,6 +17,8 @@ function ConteudoTelaAtividade(props) {
     const { respiracaoSuperficialDoDia } = useContext(StoreContext);
     const { respiracaoProfundaDoDia } = useContext(StoreContext);
     const { relaxamentoDoDia } = useContext(StoreContext);
+    const nomeArray = nomeUsuario.split(" ")
+    const nome = nomeArray[0]
     var data = new Date();
     var dia = data.getDate();
     var numeromes = data.getMonth();
@@ -88,7 +90,7 @@ function ConteudoTelaAtividade(props) {
 
             <S.Container >
                 <S.LeftSide >
-                    <label>Olá, {nomeUsuario}</label>
+                    <label>Olá, {nome}</label>
                     <img src={image(props.tarefasPendentes)} alt="Imagem Progresso Excelente" />
                 </S.LeftSide>
                 <S.RigthSide
@@ -101,21 +103,21 @@ function ConteudoTelaAtividade(props) {
                     <label>Atividades do dia {dia + "/" + mes + "/" + ano}</label>
                     <div id="respiracaoSuperficial" >
                         <button type="button" onClick={() => { window.location.replace("TelaRespiracaoSuperficial") }}   >
-                            <CartoesExercicios exercicio={"Respiração Superficial"} />
+                            <BotoesExercicios exercicio={"Respiração Superficial"} />
                         </button>
                     </div>
 
 
                     <div id="respiracaoProfunda" >
                         <button type="button" onClick={() => { window.location.replace("TelaRespiracaoProfunda") }}>
-                            <CartoesExercicios exercicio={"Respiração Profunda"} />
+                            <BotoesExercicios exercicio={"Respiração Profunda"} />
                         </button>
 
                     </div>
                     <div id="relaxamentoDoDia" >
 
                         <button type="button" onClick={() => { window.location.replace("TelaRelaxamento") }} >
-                            <CartoesExercicios exercicio={"Relaxamento"} />
+                            <BotoesExercicios exercicio={"Relaxamento"} />
                         </button>
                     </div>
 

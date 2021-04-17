@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.div`
 width:100%;
 min-height:60px;
-background:#A54786;
-border-top: 5px solid #DAA520;
+background:#6D3E5D;
+border-top: 5px solid #C79518;
 position:relative;
 display:flex;
 align-items:center;
@@ -17,7 +17,7 @@ a{
     font-size:20px;
     
     &:hover{
-        color: #DAA520;
+        color: #C79518;
     }
     
     };

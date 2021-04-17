@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 300px;
   height: 80px;
-  background: ${props => props.actived ? '#DAA520' : '#A54786'};
+  background: ${props => props.actived ? '#DAA520' : '#6D3E5D'};
   margin-left:-7px;
   
 

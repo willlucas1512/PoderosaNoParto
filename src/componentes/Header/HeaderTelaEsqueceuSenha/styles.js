@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.div`
 width: 100%;//1920px;
 height: 100px;
-background:#A54786;//rgba(246,142,134,1)
-border-bottom: 10px solid  #DAA520; //dourado
+background:#6D3E5D;
+border-bottom: 10px solid  #C79518; //dourado
 display:flex;
 
 img{
@@ -39,7 +39,7 @@ h3{
 
 width:12%;
 
-   color: #DAA520;
+   color: #C79518;
 font-weight: bold;
 text-decoration:none;
 margin: 0 5px;
@@ -53,7 +53,7 @@ font-style:arial;
 a{
 width:80px;
 
-color: #A54786;
+color: #6D3E5D;
 font-weight: bold;
 text-decoration:none;
 margin: 0px 5px;
@@ -61,7 +61,7 @@ font-size:30px;
 font-style:arial;
 
 &:hover{
-    color:#DAA520;
+    color:#C79518;
 };
 
 };

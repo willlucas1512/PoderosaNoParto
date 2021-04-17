@@ -3,7 +3,7 @@ import * as S from './styles';
 
 import filter from '../../assets/iconefilter100%.png';
 
-function FilterCard(props) {
+function FilterCardProgresso(props) {
   return (
     <S.Container actived={props.actived}>
       <img src={filter} alt="Filtro" />
@@ -12,4 +12,4 @@ function FilterCard(props) {
   )
 }
 
-export default FilterCard;
+export default FilterCardProgresso;

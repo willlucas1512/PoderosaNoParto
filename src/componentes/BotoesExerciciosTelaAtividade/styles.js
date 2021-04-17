@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 
-  background: ${props => props.actived ? '#DAA520' : '#A54786'};
+  background: ${props => props.actived ? '#C79518' : '#6D3E5D'};
   
   height: 100px;
   display:flex;
@@ -42,7 +42,7 @@ export const Container = styled.div`
 
 
   &:hover{
-    background: #DAA520;
+    background: #C79518;
     
   }
 

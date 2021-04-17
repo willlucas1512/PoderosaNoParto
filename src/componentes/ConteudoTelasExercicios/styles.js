@@ -34,7 +34,7 @@ export const CenterSide = styled.div`
         font-size:50px;
         font-weight: bold;
         text-shadow: 0.1em 0.1em 0.2em rgba(112,112,112,0.5);
-        color:#A54786;
+        color:#6D3E5D;
         display:flex;
         justify-content:center;
         margin-bottom:20px;
@@ -77,14 +77,14 @@ export const CenterSide = styled.div`
         margin-top:20px;
         margin-bottom:40px;
         box-shadow:10px 30px 90px rgba(112,112,112,0.3);
-        background:rgba(0, 0, 249, 0.5);//azul;;
+        background:#6D3E5D;
         color:white ;
         font-size:30px;
         cursor:pointer;
     };
     button:hover{
        
-        background:#DAA520;
+        background:#C79518;
     };
 
 
