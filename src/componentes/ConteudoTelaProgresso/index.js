@@ -15,6 +15,10 @@ function ConteudoTelaProgresso() {
     const [tasks, setTasks] = useState([]);
     const { cpf } = useContext(StoreContext);
     const { token } = useContext(StoreContext);
+    const [graficoRespiracaoSuperficial, setGraficoRespiracaoSuperficial] = useState();
+    const [graficoRespiracaoProfunda, setGraficoRespiracaoProfunda] = useState();
+    const [graficoRelaxamento, setGraficoRelaxamento] = useState();
+
 
     if (token === null) {
 
@@ -25,9 +29,34 @@ function ConteudoTelaProgresso() {
 
     async function loadTasks() {
 
+        var RespiracaoSuperficial = 0
+        var RespiracaoProfunda = 0
+        var Relaxamento = 0
+
         await api.get(`/task/filter/${filterActived}/${cpf}`)
             .then(response => {
                 setTasks(response.data)
+
+                for (var i = 0; i < response.data.length; i++) {
+                    console.log(response.data[i].titulo)
+
+                    if (response.data[i].titulo == "Respiracao Superficial") {
+                        RespiracaoSuperficial = RespiracaoSuperficial + 1
+
+                    }
+                    if (response.data[i].titulo == "Respiracao Profunda") {
+                        RespiracaoProfunda = RespiracaoProfunda + 1
+
+                    }
+                    if (response.data[i].titulo == "Relaxamento") {
+                        Relaxamento = Relaxamento + 1
+
+                    }
+
+                }
+                setGraficoRespiracaoSuperficial(RespiracaoSuperficial)
+                setGraficoRespiracaoProfunda(RespiracaoProfunda)
+                setGraficoRelaxamento(Relaxamento)
 
             })
     }
@@ -39,7 +68,8 @@ function ConteudoTelaProgresso() {
 
 
 
-    }, [filterActived, loadTasks])
+    }, [filterActived, "1"])
+
 
 
 
@@ -76,6 +106,7 @@ function ConteudoTelaProgresso() {
                                 {
                                     tasks.map(t => (
 
+
                                         < CartoesExerciciosProgresso icone={iconeRespiracao}
                                             titulo={t.titulo}
                                             duracao={t.duracao}
@@ -83,6 +114,8 @@ function ConteudoTelaProgresso() {
                                         />
 
                                     )).reverse()
+
+
                                 }
 
                             </S.Scroll>
@@ -92,7 +125,11 @@ function ConteudoTelaProgresso() {
 
                         <S.RightSideCentro >
                             <    h1 > Estatísticas </h1>
-                            <GraficoTelaProgresso alt="Gráfico das tarefas" />
+                            <GraficoTelaProgresso
+                                graficoRespiracaoSuperficial={graficoRespiracaoSuperficial}
+                                graficoRespiracaoProfunda={graficoRespiracaoProfunda}
+                                graficoRelaxamento={graficoRelaxamento}
+                                alt="Gráfico das tarefas" />
 
                         </S.RightSideCentro>
 

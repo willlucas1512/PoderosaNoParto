@@ -10,13 +10,17 @@ function CartoesExerciciosProgresso({ titulo, duracao, finalizada }) {
     function iconeExercicio() {
 
         if (titulo === "Relaxamento")
+
             return <MdIcons.MdAirlineSeatReclineExtra size="35" />
         else
+
             return <GiIcons.GiAwareness size="35" alt="Icone da Tarefa" />
 
 
 
     }
+
+
 
     return (
 
