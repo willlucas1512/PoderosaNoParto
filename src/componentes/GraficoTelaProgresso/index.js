@@ -16,19 +16,19 @@ function GraficoTelaProgresso(props) {
         {
             name: 'Respiração S.',
 
-            pv: props.graficoRespiracaoSuperficial,
+            atividades: props.graficoRespiracaoSuperficial,
 
         },
         {
             name: 'Respiração P.',
 
-            pv: props.graficoRespiracaoProfunda,
+            atividades: props.graficoRespiracaoProfunda,
 
         },
         {
             name: 'Relaxamento',
 
-            pv: props.graficoRelaxamento,
+            atividades: props.graficoRelaxamento,
 
         },
 
@@ -53,9 +53,9 @@ function GraficoTelaProgresso(props) {
                     <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }} />
                     <YAxis />
                     <Tooltip />
-                    <Legend />
+                    <Legend marginLeft="20px" />
                     <CartesianGrid strokeDasharray="3 3" />
-                    <Bar dataKey="pv" fill="#8884d8" background={{ fill: '#eee' }} />
+                    <Bar dataKey="atividades" fill="#6D3E5D" background={{ fill: '#FFF' }} />
                 </BarChart>
             </ResponsiveContainer>
         </S.Container>

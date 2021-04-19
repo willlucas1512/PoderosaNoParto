@@ -14,17 +14,11 @@ function ConteudoTelaProgresso() {
     const [filterActived, setFilterActived] = useState('all');
     const [tasks, setTasks] = useState([]);
     const { cpf } = useContext(StoreContext);
-    const { token } = useContext(StoreContext);
     const [graficoRespiracaoSuperficial, setGraficoRespiracaoSuperficial] = useState();
     const [graficoRespiracaoProfunda, setGraficoRespiracaoProfunda] = useState();
     const [graficoRelaxamento, setGraficoRelaxamento] = useState();
 
 
-    if (token === null) {
-
-        window.location.replace("/")
-
-    }
 
 
     async function loadTasks() {
