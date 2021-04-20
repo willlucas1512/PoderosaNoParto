@@ -28,15 +28,14 @@ export const TopSide = styled.div`
    width: 100%;
    margin-top:20px;
    margin-bottom:20px;
-   height: 87px;
+   height: 67px;
    top:0px;
    top:90px;
    display:flex;
    justify-content: center;
-  
 
    a{
-      width: 490px;
+      width: 310px;
       height: 67px;
       font-size:60px;
       font-weight: bold;
@@ -66,29 +65,30 @@ width: 100%;
      
       display:flex;
   
-      a{
-         text-decoration: none;
-          font-size:30px;
-          color:#6D3E5D;
-          font-weight: bold;
-       margin-left:5px;
-       margin-right:5px;
-       }
-       a:hover{
-         text-decoration: underline;
-        cursor:pointer;
+         a{
+          
+            font-size:35px;
+            color:#6D3E5D;
+            font-weight: bold;
+         margin-left:5px;
+         margin-right:5px;
+         }
+         span{
+          
+            text-align:start;
        }
 
    }
 `
 
 export const BottomSide = styled.div`
-   width: 100%;
-   height:280px;
-
+   width: 95%;
+   height:180px;
+margin:40px;
    align-items:center;
    justify-content: center;
    display:flex;
+  
    h3{
      
       width: 100%;
@@ -98,6 +98,7 @@ export const BottomSide = styled.div`
       align-items:center;
       justify-content: center;
       display:flex;
+      text-align:center;
  
       a{
          text-decoration: none;

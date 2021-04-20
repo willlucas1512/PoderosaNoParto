@@ -11,7 +11,7 @@ import StoreContext from './../Store/Context';
 function ConteudoTelaProgresso() {
 
 
-    const [filterActived, setFilterActived] = useState('all');
+    const [filterActived, setFilterActived] = useState('week');
     const [tasks, setTasks] = useState([]);
     const { cpf } = useContext(StoreContext);
     const [graficoRespiracaoSuperficial, setGraficoRespiracaoSuperficial] = useState();
@@ -88,12 +88,20 @@ function ConteudoTelaProgresso() {
 
                         </button>
 
+
                     </S.TopSide>
-                    < S.divisao > _____________________________________________________________________________________________________________________________________________________________________________ </S.divisao>
+                    < S.divisao > _____________________________________________________________________________________________________________________________________________________________________________
+                     <div id="labels">
+                            < h1> Atividades Realizadas </h1>
+                            < h1 > Estatísticas </h1>
+
+                        </div>
+
+                    </S.divisao>
 
                     <S.Centro >
                         <S.LeftSideCentro >
-                            < h1 > Atividades Realizadas </h1>
+
 
                             <S.Scroll >
 
@@ -118,7 +126,7 @@ function ConteudoTelaProgresso() {
                         </S.LeftSideCentro>
 
                         <S.RightSideCentro >
-                            <    h1 > Estatísticas </h1>
+
                             <GraficoTelaProgresso
                                 graficoRespiracaoSuperficial={graficoRespiracaoSuperficial}
                                 graficoRespiracaoProfunda={graficoRespiracaoProfunda}

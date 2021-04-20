@@ -11,7 +11,7 @@ import TelaRespiracaoProfunda from './../views/TelaRespiracaoProfunda'
 import TelaRespiracaoSuperficial from './../views/TelaRespiracaoSuperficial'
 import TelaPoliticaDePrivacidade from './../views/TelaPoliticaDePrivacidade'
 import TelaTermosECondicoes from './../views/TelaTermosECondicoes'
-
+import TelaSobreOSite from './../views/TelaSobreOSite'
 import TelaFaleComAGente from './../views/TelaFaleComAGente'
 import TelaMais from './../views/TelaMais'
 import TelaRelaxamento from './..//views/TelaRelaxamento'
@@ -37,6 +37,7 @@ class Routes extends React.Component {
                         <Route path="/TelaTermosECondicoes" ><TelaTermosECondicoes /> </Route>
                         <Route path="/TelaFaleComAGente" ><TelaFaleComAGente /> </Route>
                         <Route path="/TelaEsqueceuSenha" ><TelaEsqueceuSenha /> </Route>
+                        <Route path="/TelaSobreOSite" ><TelaSobreOSite /> </Route>
                         <RoutesPrivate path="/TelaPerfil" ><TelaPerfil /> </RoutesPrivate>
                         <RoutesPrivate path="/TelaRespiracaoProfunda" ><TelaRespiracaoProfunda /> </RoutesPrivate>
                         <RoutesPrivate path="/TelaRespiracaoSuperficial" ><TelaRespiracaoSuperficial /> </RoutesPrivate>

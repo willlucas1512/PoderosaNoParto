@@ -32,6 +32,7 @@ position: relative;
 
 export const TopSide = styled.div`
   position: relative;
+
   width: 97%;
   height: 67px;
   padding:20px;
@@ -61,6 +62,27 @@ export const divisao = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
+  display:flex;
+  flex-direction:column;
+
+  #labels{
+    width: 90%;
+    display:flex;
+    flex-direction:inline;
+
+justify-content: space-around;
+
+  }
+  h1{
+    margin-top:20px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:#A54786;
+    text-shadow: 0.1em 0.1em 0.2em rgba(112,112,112,0.5);
+
+  }
+
 
 `
 export const Centro = styled.div`
@@ -75,29 +97,24 @@ export const Centro = styled.div`
 position: relative;
 `
 export const LeftSideCentro = styled.div`
-
+margin-top:-50px;
+margin-left:10px;
   width: 48%;
-  height: 459px;
+  height: 420px;
   display:flex;
   align-items: center;
   justify-content: center;
   flex-direction:column;
-
-  h1{
-
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    color:#A54786;
-    text-shadow: 0.1em 0.1em 0.2em rgba(112,112,112,0.5);
-
-  }
+  //background:yellow;
+ 
 
 `
 export const Scroll = styled.div`
-
-
-
+  width: 100%;
+//background:green;
+display:flex;
+position: relative;
+flex-direction:column;
 
 overflow-y: scroll;
 `

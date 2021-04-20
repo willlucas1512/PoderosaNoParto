@@ -12,7 +12,7 @@ function HeaderTelaHome() {
             <S.Menu>
                 <a href="/">Home </a>
                 <span className="dividir" />
-                <a href="http://nepae.uff.br/2020/07/08/preparo-para-o-parto-e-aleitamento/">Sobre o projeto</a>
+                <a href="/TelaSobreOSite">Sobre o site</a>
                 <span className="dividir" />
                 <a href="/TelaFaleComAGente">Fale com a gente</a>
             </S.Menu>
