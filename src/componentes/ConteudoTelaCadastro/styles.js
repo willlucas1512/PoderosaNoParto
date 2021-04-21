@@ -53,6 +53,23 @@ export const Centro = styled.div`
    display:flex;
    flex-direction:in-line;
    justify-content: center;
+   #senhas{
+      width: 100%;
+      height: 80px;
+
+display:flex;
+align-items:center;
+button{
+   background:none;
+   border:none;
+   position:relative;
+margin-top:16px;
+margin-left:-55px;
+   width: 50px;
+      height: 40px;
+
+}
+   }
 
 `
 export const Form1 = styled.div`

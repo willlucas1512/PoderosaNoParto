@@ -16,7 +16,7 @@ import TelaFaleComAGente from './../views/TelaFaleComAGente'
 import TelaMais from './../views/TelaMais'
 import TelaRelaxamento from './..//views/TelaRelaxamento'
 import TelaEsqueceuSenha from './..//views/TelaEsqueceuSenha'
-
+import TelaResetarSenha from './..//views/TelaResetarSenha'
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import StoreProvider from './../componentes/Store/Provider';
@@ -38,6 +38,7 @@ class Routes extends React.Component {
                         <Route path="/TelaFaleComAGente" ><TelaFaleComAGente /> </Route>
                         <Route path="/TelaEsqueceuSenha" ><TelaEsqueceuSenha /> </Route>
                         <Route path="/TelaSobreOSite" ><TelaSobreOSite /> </Route>
+                        <Route path="/TelaResetarSenha" ><TelaResetarSenha /> </Route>
                         <RoutesPrivate path="/TelaPerfil" ><TelaPerfil /> </RoutesPrivate>
                         <RoutesPrivate path="/TelaRespiracaoProfunda" ><TelaRespiracaoProfunda /> </RoutesPrivate>
                         <RoutesPrivate path="/TelaRespiracaoSuperficial" ><TelaRespiracaoSuperficial /> </RoutesPrivate>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as S from './styles.js'
 import api from '../../services/api';
-
+import * as IoIcons from 'react-icons/io5';
 
 
 function ConteudoTelaCadastro() {
@@ -68,7 +68,51 @@ function ConteudoTelaCadastro() {
 
     };
 
+    const [mostrarSenha, setMostrarSenha] = useState("text");
+    const [mostrarConfirmarSenha, setMostrarConfirmarSenha] = useState("text");
 
+    function mostrarASenha() {
+
+        if (mostrarSenha == "text") {
+
+            setMostrarSenha("password")
+        } else {
+            setMostrarSenha("text")
+        }
+    }
+    function iconeSenha() {
+
+        if (mostrarSenha === "text")
+
+            return <IoIcons.IoEyeSharp size="30" />
+        else
+
+            return <IoIcons.IoEyeOff size="30" />
+
+
+
+    }
+    function mostrarOConfirmarSenha() {
+
+        if (mostrarConfirmarSenha == "text") {
+
+            setMostrarConfirmarSenha("password")
+        } else {
+            setMostrarConfirmarSenha("text")
+        }
+    }
+    function iconeConfirmarSenha() {
+
+        if (mostrarConfirmarSenha === "text")
+
+            return <IoIcons.IoEyeSharp size="30" />
+        else
+
+            return <IoIcons.IoEyeOff size="30" />
+
+
+
+    }
 
     return (
         < div >
@@ -100,17 +144,22 @@ function ConteudoTelaCadastro() {
                                 name="cpf" >
 
                             </input>
+                            <div id="senhas">
+                                <input type={mostrarSenha}
+                                    className="inputCadastro"
+                                    placeholder="Senha"
+                                    id="senha"
+                                    required value={user.senha}
+                                    onChange={handleInputChange}
+                                    name="senha" >
 
-                            <input type="password"
-                                className="inputCadastro"
-                                placeholder="Senha"
-                                id="senha"
-                                required value={user.senha}
-                                onChange={handleInputChange}
-                                name="senha" >
 
-                            </input>
+                                </input>
+                                <button onClick={mostrarASenha}>
 
+                                    {iconeSenha()}
+                                </button>
+                            </div>
                             <select type="text"
                                 className="inputCadastro"
                                 placeholder="Sexo"
@@ -160,12 +209,17 @@ function ConteudoTelaCadastro() {
 
                             >
                             </input>
+                            <div id="senhas">
+                                <input type={mostrarConfirmarSenha}
+                                    className="inputCadastro"
+                                    placeholder="Confirmar Senha" >
 
-                            <input type="text"
-                                className="inputCadastro"
-                                placeholder="Confirmar Senha" >
-                            </input>
+                                </input>
+                                <button onClick={mostrarOConfirmarSenha}>
 
+                                    {iconeConfirmarSenha()}
+                                </button>
+                            </div>
                             <select type="text"
                                 className="inputCadastro"
                                 placeholder="Raça/Cor"
