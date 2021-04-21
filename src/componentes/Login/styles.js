@@ -10,13 +10,45 @@ flex-direction:column;
 align-items:center;
 justify-content: center;
 
+#senhas{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    //  background:yellow;
+      width: 100%;
+      height: 130px;
 
+display:flex;
+align-items:center;
+input{
+  
+ margin-top: 30px;
+  width: 100%;
+  height: 70px;
+  border-radius:10px;
+  font-size:19px;
+  padding-left:10px;
+  color:rgb(112,112,112);
+
+
+};
+button{
+   background:none;
+  border:none;
+   position:relative;
+margin-top:40px;
+margin-left:-65px;
+   width: 60px;
+      height: 60px;
+
+}
+   }
 
 
 .inputLogin{
   
    margin-top: 55px;
-   width: 469px;
+   width: 100%;
    height: 100px;
    border:none;
    border-radius:10px;

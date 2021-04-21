@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import * as S from './styles.js'
 import StoreContext from './../Store/Context'
+import * as IoIcons from 'react-icons/io5';
 
 import api from '../../services/api';
 function initialState() {
@@ -55,14 +56,42 @@ function Login() {
 
     }
 
+    const [mostrarSenha, setMostrarSenha] = useState("password");
 
+    function mostrarASenha() {
+
+        if (mostrarSenha == "text") {
+
+            setMostrarSenha("password")
+        } else {
+            setMostrarSenha("text")
+        }
+    }
+    function iconeSenha() {
+
+        if (mostrarSenha === "text")
+
+            return <IoIcons.IoEyeSharp size="40" />
+        else
+
+            return <IoIcons.IoEyeOff size="40" />
+
+
+
+    }
     return (
         <div>
             <S.Container>
 
                 <input name="cpf" className="inputLogin" onChange={onChange} value={values.cpf} placeholder="Digite seu CPF"></input>
+                <div id="senhas">
 
-                <input name="senha" type="text" className="inputLogin" onChange={onChange} value={values.senha} placeholder="Digite sua Senha"></input>
+                    <input name="senha" type={mostrarSenha} className="inputLogin" onChange={onChange} value={values.senha} placeholder="Digite sua Senha"></input>
+                    <button onClick={mostrarASenha}>
+
+                        {iconeSenha()}
+                    </button>
+                </div>
                 <button type="submit" className="btnLogin" onClick={onSubmit} >Iniciar Sessão</button>
                 <a href="/TelaEsqueceuSenha">Esqueceu a senha?</a>
                 <span className="dividir" />

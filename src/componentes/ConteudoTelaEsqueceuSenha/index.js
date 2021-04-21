@@ -9,7 +9,7 @@ function initialState() {
 }
 
 function ConteudoTelaEsqueceuSenha() {
-    const { setIdUsuario } = useContext(StoreContext);
+    const { setIdUsuarioReset } = useContext(StoreContext);
     const [values, setValues] = useState(initialState);
     //Função onChange atualizaos valores dos inputs 
     function onChange(event) {
@@ -32,7 +32,7 @@ function ConteudoTelaEsqueceuSenha() {
             .then((response) => {
                 if (response.data.valor === true) {
                     setValues(initialState)
-                    setIdUsuario(response.data.idUsuario)
+                    setIdUsuarioReset(response.data.idUsuario)
                     console.log(response.data.valor)
                     console.log(response.data.idUsuario)
                     return window.location.replace('/TelaResetarSenha')

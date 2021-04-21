@@ -20,6 +20,9 @@ const StoreContext = createContext({
   idUsuario: null,
   setIdUsuario: () => { },
 
+  idUsuarioReset: null,
+  setIdUsuarioReset: () => { },
+
   nomeUsuario: null,
   setNomeUsuario: () => { },
 

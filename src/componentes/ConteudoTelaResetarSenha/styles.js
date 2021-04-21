@@ -60,18 +60,40 @@ export const Centro = styled.div`
    //justify-content:center;
    display:flex;
    flex-direction:column;
-   input{
+   #senhas{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    //  background:yellow;
+      width: 100%;
+      height: 130px;
+
+display:flex;
+align-items:center;
+input{
   
-   margin-top: 50px;
-   width: 90%;
-   height: 70px;
-   border-radius:30px;
-   font-size:19px;
-   padding-left:10px;
-   color:rgb(112,112,112);
+ margin-top: 30px;
+  width: 60%;
+  height: 70px;
+  border-radius:30px;
+  font-size:19px;
+  padding-left:10px;
+  color:rgb(112,112,112);
 
 
 };
+button{
+   background:none;
+  border:none;
+   position:relative;
+margin-top:20px;
+margin-left:-65px;
+   width: 50px;
+      height: 40px;
+
+}
+   }
+ 
 
   
 
@@ -83,13 +105,14 @@ export const Centro = styled.div`
 export const BottomSide = styled.div`
 width: 100%;
 height:20%;
+margin-top:-350px;
 flex-direction:column;
 align-items:center;
 justify-content: center;
 display:flex;
-
+//background:green;
 .btnNovaSenha{
-    
+    background:green;
    width: 40%;
     height: 68px;
     border:none;

@@ -6,6 +6,7 @@ const StoreProvider = ({ children }) => {
 
   const [token, setToken] = useStorage('token');
   const [idUsuario, setIdUsuario] = useStorage('idUsuario');
+  const [idUsuarioReset, setIdUsuarioReset] = useStorage('idUsuarioReset');
   const [cpf, setCpf] = useStorage('cpf');
   const [nomeUsuario, setNomeUsuario] = useStorage('nomeUsuario');
   const [respiracaoSuperficialDoDia, setRespiracaoSuperficialDoDia] = useStorage('respiracaoSuperficialDoDia');
@@ -23,6 +24,8 @@ const StoreProvider = ({ children }) => {
         setCpf,
         idUsuario,
         setIdUsuario,
+        idUsuarioReset,
+        setIdUsuarioReset,
         nomeUsuario,
         setNomeUsuario,
         respiracaoSuperficialDoDia,

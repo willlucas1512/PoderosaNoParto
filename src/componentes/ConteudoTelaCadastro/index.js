@@ -68,8 +68,8 @@ function ConteudoTelaCadastro() {
 
     };
 
-    const [mostrarSenha, setMostrarSenha] = useState("text");
-    const [mostrarConfirmarSenha, setMostrarConfirmarSenha] = useState("text");
+    const [mostrarSenha, setMostrarSenha] = useState("password");
+    const [mostrarConfirmarSenha, setMostrarConfirmarSenha] = useState("password");
 
     function mostrarASenha() {
 

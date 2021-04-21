@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import * as S from './styles.js'
 import api from '../../services/api';
 import StoreContext from './../Store/Context'
+import * as IoIcons from 'react-icons/io5';
 
 function ConteudoTelaResetarSenha() {
 
@@ -14,7 +15,12 @@ function ConteudoTelaResetarSenha() {
 
 
     const [values, setValues] = useState(initialUserState);
-    const { idUsuario } = useContext(StoreContext);
+    const { idUsuarioReset, setIdUsuarioReset } = useContext(StoreContext);
+    console.log(idUsuarioReset)
+    if (!idUsuarioReset) {
+
+        window.location.replace("/")
+    }
 
     function onChange(event) {
         const { value, name } = event.target;
@@ -33,7 +39,7 @@ function ConteudoTelaResetarSenha() {
 
             }
 
-            await api.put(`/user/${idUsuario}`, data)
+            await api.put(`/user/${idUsuarioReset}`, data)
 
                 .then(response => {
                     setValues({
@@ -47,6 +53,7 @@ function ConteudoTelaResetarSenha() {
                     });
 
                     console.log(response.data);
+                    setIdUsuarioReset("")
                     window.location.replace("/")
                 })
                 .catch(e => {
@@ -67,6 +74,52 @@ function ConteudoTelaResetarSenha() {
 
 
     };
+    const [mostrarSenha, setMostrarSenha] = useState("password");
+    const [mostrarConfirmarSenha, setMostrarConfirmarSenha] = useState("password");
+
+
+    function mostrarASenha() {
+
+        if (mostrarSenha == "text") {
+
+            setMostrarSenha("password")
+        } else {
+            setMostrarSenha("text")
+        }
+    }
+    function iconeSenha() {
+
+        if (mostrarSenha === "text")
+
+            return <IoIcons.IoEyeSharp size="40" />
+        else
+
+            return <IoIcons.IoEyeOff size="40" />
+
+
+
+    }
+    function mostrarOConfirmarSenha() {
+
+        if (mostrarConfirmarSenha == "text") {
+
+            setMostrarConfirmarSenha("password")
+        } else {
+            setMostrarConfirmarSenha("text")
+        }
+    }
+    function iconeConfirmarSenha() {
+
+        if (mostrarConfirmarSenha === "text")
+
+            return <IoIcons.IoEyeSharp size="40" />
+        else
+
+            return <IoIcons.IoEyeOff size="40" />
+
+
+
+    }
 
 
     return (
@@ -80,12 +133,35 @@ function ConteudoTelaResetarSenha() {
                     <S.Centro >
 
 
+                        <div id="senhas">
+                            <input name="senha"
+                                type={mostrarSenha}
+                                onChange={onChange}
+                                value={values.senha}
+                                placeholder="Senha">
 
-                        <input name="senha" type="text" onChange={onChange} value={values.senha} placeholder="Senha"></input>
-                        <input name="confirmarSenha" type="text" onChange={onChange} value={values.confirmarSenha} placeholder="Confirmar Senha"></input>
+                            </input>
+                            <button onClick={mostrarASenha}>
 
+                                {iconeSenha()}
+                            </button>
+                        </div>
 
+                        <div id="senhas">
+                            <input
+                                name="confirmarSenha"
+                                type={mostrarConfirmarSenha}
+                                onChange={onChange}
+                                value={values.confirmarSenha}
+                                placeholder="Confirmar Senha">
 
+                            </input>
+                            <button onClick={mostrarOConfirmarSenha}>
+
+                                {iconeConfirmarSenha()}
+                            </button>
+
+                        </div>
 
 
                     </S.Centro>
