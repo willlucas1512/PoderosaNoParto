@@ -2,9 +2,6 @@ import React, { useState, useContext } from "react";
 import * as S from './styles.js'
 import api from '../../services/api';
 import StoreContext from './../Store/Context';
-import { getDate, getDay } from "date-fns";
-import { getHours } from "date-fns/esm";
-
 
 function ConteudoTelaPerfil() {
     const data = new Date()
@@ -50,7 +47,6 @@ function ConteudoTelaPerfil() {
             .then(response => {
                 setUser({
 
-                    //  id: response.data.id,
                     nome: response.data.nome,
                     cpf: response.data.cpf,
                     sexo: response.data.sexo,
@@ -61,23 +57,17 @@ function ConteudoTelaPerfil() {
                     ultMest: response.data.ultMest,
                     modificed: response.data.modificed
 
-
-
                 });
 
-                console.log(response.data);
                 window.location.replace("/TelaAtividade")
+
             })
             .catch(e => {
 
                 console.log("Erro ao Alterar");
             });
 
-
-
     };
-
-
 
     return (
         < div >

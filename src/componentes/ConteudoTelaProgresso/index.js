@@ -31,7 +31,6 @@ function ConteudoTelaProgresso() {
                 setTasks(response.data)
 
                 for (var i = 0; i < response.data.length; i++) {
-                    console.log(response.data[i].titulo)
 
                     if (response.data[i].titulo == "Respiracao Superficial") {
                         RespiracaoSuperficial = RespiracaoSuperficial + 1
@@ -55,16 +54,7 @@ function ConteudoTelaProgresso() {
     }
 
 
-
-    useEffect(() => {
-        loadTasks();
-
-
-
-    }, [filterActived, "1"])
-
-
-
+    useEffect(() => { loadTasks() }, [filterActived, "1"])
 
     return (
 

@@ -13,7 +13,7 @@ function initialState() {
 function Login() {
 
     const [values, setValues] = useState(initialState);
-    const { token, setToken } = useContext(StoreContext);
+    const { setToken } = useContext(StoreContext);
     const { setIdUsuario } = useContext(StoreContext);
     const { setCpf } = useContext(StoreContext);
     const { setNomeUsuario } = useContext(StoreContext);
@@ -44,13 +44,12 @@ function Login() {
                 setNomeUsuario(response.data.nomeUsuario)
                 setIdUsuario(response.data.idUsuario)
                 setValues(initialState)
-                console.log(token)
                 return history.push('/TelaAtividade')
 
 
             })
             .catch(e => {
-                console.log("Erro ao cadastrar aqui")
+                console.log("Erro ao logar")
 
             });
 

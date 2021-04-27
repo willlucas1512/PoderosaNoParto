@@ -15,12 +15,7 @@ function CartoesExerciciosProgresso({ titulo, duracao, finalizada }) {
         else
 
             return <GiIcons.GiAwareness size="35" alt="Icone da Tarefa" />
-
-
-
     }
-
-
 
     return (
 

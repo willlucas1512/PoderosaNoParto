@@ -10,8 +10,7 @@ import StoreContext from './../Store/Context'
 
 function BellNavBar(props) {
     const [sidebar, setSidebar] = useState(false);
-
-    const showSidebar = () => setSidebar(!sidebar); //BsFillBellFill
+    const showSidebar = () => setSidebar(!sidebar);
     const { respiracaoSuperficialDoDia } = useContext(StoreContext);
     const { respiracaoProfundaDoDia } = useContext(StoreContext);
     const { relaxamentoDoDia } = useContext(StoreContext);

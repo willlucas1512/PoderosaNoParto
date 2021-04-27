@@ -11,7 +11,7 @@ function initialState() {
 function ConteudoTelaEsqueceuSenha() {
     const { setIdUsuarioReset } = useContext(StoreContext);
     const [values, setValues] = useState(initialState);
-    //Função onChange atualizaos valores dos inputs 
+    //Função onChange atualiza os valores dos inputs 
     function onChange(event) {
         const { value, name } = event.target;
 
@@ -33,14 +33,12 @@ function ConteudoTelaEsqueceuSenha() {
                 if (response.data.valor === true) {
                     setValues(initialState)
                     setIdUsuarioReset(response.data.idUsuario)
-                    console.log(response.data.valor)
-                    console.log(response.data.idUsuario)
                     return window.location.replace('/TelaResetarSenha')
                 }
 
             })
             .catch(e => {
-                console.log("Erro ao cadastrar aqui")
+
                 console.log(e)
             });
 

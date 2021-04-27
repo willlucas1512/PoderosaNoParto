@@ -1,36 +1,26 @@
-
-
 import React, { PureComponent } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-
 import * as S from './styles.js'
-
 
 
 function GraficoTelaProgresso(props) {
 
-    console.log(props.graficoRespiracaoSuperficial)
-
-
     var data = [
         {
             name: 'Respiração S.',
-
-            atividades: props.graficoRespiracaoSuperficial,
+            Atividades_por_Período: props.graficoRespiracaoSuperficial
 
         },
         {
             name: 'Respiração P.',
-
-            atividades: props.graficoRespiracaoProfunda,
+            Atividades_por_Período: props.graficoRespiracaoProfunda
 
         },
         {
             name: 'Relaxamento',
+            Atividades_por_Período: props.graficoRelaxamento
 
-            atividades: props.graficoRelaxamento,
-
-        },
+        }
 
 
     ];
@@ -55,7 +45,7 @@ function GraficoTelaProgresso(props) {
                     <Tooltip />
                     <Legend marginLeft="20px" />
                     <CartesianGrid strokeDasharray="3 3" />
-                    <Bar dataKey="atividades" fill="#6D3E5D" background={{ fill: '#FFF' }} />
+                    <Bar dataKey="Atividades_por_Período" fill="#6D3E5D" background={{ fill: '#FFF' }} />
                 </BarChart>
             </ResponsiveContainer>
         </S.Container>

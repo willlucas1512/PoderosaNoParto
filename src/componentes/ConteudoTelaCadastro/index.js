@@ -56,8 +56,6 @@ function ConteudoTelaCadastro() {
         }
 
 
-
-
         var data = {
             nome: user.nome,
             cpf: user.cpf,
@@ -70,14 +68,12 @@ function ConteudoTelaCadastro() {
             ultMest: `${user.ultMest}T23:40:00.000+00:00`
 
         }
-        console.log(data)
 
         await api.post("/user/", data)
 
             .then(response => {
                 setUser({
 
-                    //  id: response.data.id,
                     nome: response.data.nome,
                     cpf: response.data.cpf,
                     senha: response.data.senha,
@@ -94,7 +90,7 @@ function ConteudoTelaCadastro() {
                 window.location.replace("/")
             })
             .catch(e => {
-                console.log("Erro ao cadastrar");//tratar erro e fazer popup
+                console.log("Erro ao cadastrar");// fazer popup
             });
 
 

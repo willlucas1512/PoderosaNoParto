@@ -16,7 +16,7 @@ function ConteudoTelaResetarSenha() {
 
     const [values, setValues] = useState(initialUserState);
     const { idUsuarioReset, setIdUsuarioReset } = useContext(StoreContext);
-    console.log(idUsuarioReset)
+
     if (!idUsuarioReset) {
 
         window.location.replace("/")
@@ -32,38 +32,21 @@ function ConteudoTelaResetarSenha() {
     }
 
     const saveUserSenha = async () => {
+
         if (values.senha === values.confirmarSenha) {
-            var data = {
-                senha: values.senha,
 
+            var data = { senha: values.senha }
 
-            }
-
-            await api.put(`/user/${idUsuarioReset}`, data)
+            await api.put(`/user/senha/${idUsuarioReset}`, data)
 
                 .then(response => {
-                    setValues({
-
-                        //  id: response.data.id,
-                        senha: response.data.senha,
-
-
-
-
-                    });
-
-                    console.log(response.data);
+                    setValues({ senha: response.data.senha });
                     setIdUsuarioReset("")
                     window.location.replace("/")
                 })
                 .catch(e => {
-
                     console.log(e);
                 });
-
-
-
-
 
         }
 
@@ -74,9 +57,9 @@ function ConteudoTelaResetarSenha() {
 
 
     };
+
     const [mostrarSenha, setMostrarSenha] = useState("password");
     const [mostrarConfirmarSenha, setMostrarConfirmarSenha] = useState("password");
-
 
     function mostrarASenha() {
 

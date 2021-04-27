@@ -10,8 +10,6 @@ function BotoesExerciciosTelaAtividade(props) {
             return <MdIcons.MdAirlineSeatReclineExtra color="white" size="50" alt="Icone da Tarefa" />
         else
             return <GiIcons.GiAwareness color="white" size="50" alt="Icone da Tarefa" />
-
-
     }
 
     return (

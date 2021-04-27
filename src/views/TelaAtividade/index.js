@@ -5,29 +5,22 @@ import api from '../../services/api';
 //nossos componentes
 import Header from '../../componentes/Header/HeaderTelasMenu'
 import Footer from '../../componentes/Footer'
-
 import ConteudoTelaAtividade from '../../componentes/ConteudoTelaAtividade';
-import { GiTrumpet } from 'react-icons/gi';
+
 
 function TelaAtividade() {
 
     const { respiracaoSuperficialDoDia, setRespiracaoSuperficialDoDia } = useContext(StoreContext);
     const { respiracaoProfundaDoDia, setRespiracaoProfundaDoDia } = useContext(StoreContext);
     const { relaxamentoDoDia, setRelaxamentoDoDia } = useContext(StoreContext);
-
     const { setNumeroTarefasPendentes } = useContext(StoreContext);
-    const { token } = useContext(StoreContext);
-    console.log(token)
 
     var numeroTarefasPendentes
     var tarefaRespiracaoSuperficialDoDia
     var tarefaRespiracaoProfundaDoDia
     var tarefaRelaxamentoDoDia
 
-
     const { cpf } = useContext(StoreContext);
-
-
 
     async function loadTasks() {
 
@@ -35,66 +28,38 @@ function TelaAtividade() {
             .then(response => {
                 if (response.data !== null) {
                     setRespiracaoSuperficialDoDia(true);
-                    console.log(true)
                 }
                 else {
                     setRespiracaoSuperficialDoDia(false);
-                    console.log(false)
-
                 }
-
-
-            }
-
-
-            )
+            })
 
         await api.get(`/task/exercicioDoDia/${cpf}/${"Respiracao Profunda"}`)
             .then(response => {
                 if (response.data !== null) {
                     setRespiracaoProfundaDoDia(true);
-                    console.log(true)
                 }
                 else {
                     setRespiracaoProfundaDoDia(false);
-                    console.log(false)
-
                 }
-
-
-            }
-
-
-            )
+            })
 
 
         await api.get(`/task/exercicioDoDia/${cpf}/${"Relaxamento"}`)
             .then(response => {
                 if (response.data !== null) {
                     setRelaxamentoDoDia(true);
-                    console.log(true)
                 }
                 else {
                     setRelaxamentoDoDia(false);
-                    console.log(false)
 
                 }
-
-
-            }
-
-
-            )
+            })
 
 
     }
 
-    useEffect(() => {
-        loadTasks();
-
-
-
-    }, [1, loadTasks])
+    useEffect(() => { loadTasks() }, [1, loadTasks])
 
 
     if (respiracaoSuperficialDoDia == false) {
@@ -118,8 +83,6 @@ function TelaAtividade() {
 
     numeroTarefasPendentes = (tarefaRespiracaoSuperficialDoDia + tarefaRespiracaoProfundaDoDia + tarefaRelaxamentoDoDia)
     setNumeroTarefasPendentes(numeroTarefasPendentes);
-
-
 
     return (
 

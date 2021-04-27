@@ -13,12 +13,13 @@ import * as MdIcons from "react-icons/md";
 import StoreContext from './../Store/Context';
 function ConteudoTelaAtividade(props) {
 
-    const { token, nomeUsuario } = useContext(StoreContext);
+    const { nomeUsuario } = useContext(StoreContext);
     const { respiracaoSuperficialDoDia } = useContext(StoreContext);
     const { respiracaoProfundaDoDia } = useContext(StoreContext);
     const { relaxamentoDoDia } = useContext(StoreContext);
     const nomeArray = nomeUsuario.split(" ")
     const nome = nomeArray[0]
+
     var data = new Date();
     var dia = data.getDate();
     var numeromes = data.getMonth();
@@ -63,7 +64,7 @@ function ConteudoTelaAtividade(props) {
     }
 
     function image(tarefaPendentes) {
-        console.log(tarefaPendentes)
+
         if (tarefaPendentes === 3) {
             return ProgressoFraco
         } else if (tarefaPendentes == 2) {
@@ -79,10 +80,6 @@ function ConteudoTelaAtividade(props) {
         }
 
     }
-
-
-
-
 
     return (
         <div>
