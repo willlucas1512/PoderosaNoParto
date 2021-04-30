@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
  display:flex;
-
-margin-left:85%;
+ margin-left:85%;
 //background:yellow;
 #respiracaoSuperficial{
 display:${props => props.respiracaoSuperficialDoDia ? 'none' : 'hide'}

@@ -35,23 +35,33 @@ function Login() {
 
         event.preventDefault();
 
-        await api.post("/user/" + `${values.cpf}` + "/" + `${values.senha}`)
-
-            .then((response) => {
-
-                setToken(response.data.token)
-                setCpf(response.data.cpf)
-                setNomeUsuario(response.data.nomeUsuario)
-                setIdUsuario(response.data.idUsuario)
-                setValues(initialState)
-                return history.push('/TelaAtividade')
+        if (!values.cpf)
+            return alert('Digite seu CPF')
 
 
-            })
-            .catch(e => {
-                console.log("Erro ao logar")
+        else if (!values.senha)
+            return alert('Digite sua senha')
+        else {
+            await api.post("/user/" + `${values.cpf}` + "/" + `${values.senha}`)
 
-            });
+                .then((response) => {
+
+                    setToken(response.data.token)
+                    setCpf(response.data.cpf)
+                    setNomeUsuario(response.data.nomeUsuario)
+                    setIdUsuario(response.data.idUsuario)
+                    setValues(initialState)
+                    return history.push('/TelaAtividade')
+
+
+                })
+                .catch((error) => {
+                    alert(error.response.data)
+                    console.log(error.response.data)
+
+                });
+        }
+
 
     }
 

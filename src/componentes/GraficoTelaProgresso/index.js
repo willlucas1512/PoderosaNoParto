@@ -27,7 +27,7 @@ function GraficoTelaProgresso(props) {
     return (
         <S.Container>
 
-            <ResponsiveContainer width="55%" height="55%">
+            <ResponsiveContainer width="70%" height="85%">
                 <BarChart
                     width={500}
                     height={300}

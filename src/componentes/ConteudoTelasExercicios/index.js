@@ -66,10 +66,11 @@ class ConteudoTelasExercicios extends React.Component {
 
 
                 console.log(response.data);
+                alert("Parabens!")
                 window.location.replace("/TelaAtividade")
             })
             .catch(e => {
-                console.log("Erro ao cadastrar")
+                alert("Erro ao cadastrar a Atividade")
             });
 
 

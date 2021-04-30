@@ -42,6 +42,7 @@ function ConteudoTelaResetarSenha() {
                 .then(response => {
                     setValues({ senha: response.data.senha });
                     setIdUsuarioReset("")
+                    alert('Senha Atualizada com sucesso')
                     window.location.replace("/")
                 })
                 .catch(e => {
@@ -52,7 +53,7 @@ function ConteudoTelaResetarSenha() {
 
         else {
 
-            console.log("senha não conferem")
+            alert("senha não conferem")
         }
 
 

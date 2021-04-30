@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    max-width:100%;
-   height: 905px;
-    
+    width: 100%;//1920px;
+   height: 864px;
     position: relative;
     align-items:center;
     display:flex;
@@ -13,8 +12,21 @@ export const Container = styled.div`
 
 
 `
+
+export const Centro = styled.div`
+
+margin-left:40px;
+  width: 2000px;
+  height: 800px;
+  display:flex;
+  
+  align-items: center;
+  justify-content: space-around;
+
+position: relative;
+`
 export const LeftSide = styled.div`
- 
+   
     width:900px;
     height:700px;
     margin-left:50px;
@@ -42,7 +54,7 @@ h3{
 export const RightSide = styled.div`
 
 width:900px;
-    height:700px;
+    height:680px;
       align-items:center;
     display:flex;
     border-radius:5%;
