@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
    
    width: 100%;//1920px;
-   height: 905px;
+   height: 864px;
    display:flex;
    align-items:center;
    justify-content: center;
@@ -41,7 +41,7 @@ export const TopSide = styled.div`
       font-size:60px;
       font-weight: bold;
       text-shadow: 0.1em 0.1em 0.2em rgba(112,112,112,0.5);//#707070 cinza
-      color:#6D3E5D;
+      color:#B24C4E;
      // background:yellow;
    }
 
@@ -69,7 +69,7 @@ width: 100%;
       a{
          text-decoration: none;
           font-size:30px;
-          color:#6D3E5D;
+          color:#3D80F3;
           font-weight: bold;
        margin-left:5px;
        margin-right:5px;

@@ -14,7 +14,7 @@ a{
     font-weight: bold;
     text-decoration:none;
     margin: 0 10px;
-    font-size:20px;
+    font-size:23px;
     
     &:hover{
         color: #C79518;

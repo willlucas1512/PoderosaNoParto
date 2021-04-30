@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
    
    width: 100%;//1920px;
-   height: 905px;
+   height: 864px;
    display:flex;
    align-items:center;
    justify-content: center;
@@ -43,10 +43,11 @@ export const TopSide = styled.div`
       justify-content: center;
       align-items:center;
       height: 67px;
-      font-size:40px;
+      font-size:60px;
       font-weight: bold;
       text-shadow: 0.1em 0.1em 0.2em rgba(112,112,112,0.5);//#707070 cinza
-      color:#6D3E5D;//rgba(246,142,134,1) rosa
+      color:#B24C4E;//rgba(246,142,134,1) rosa
+      margin-top:15px;
    }
 
 
@@ -58,7 +59,7 @@ export const Centro = styled.div`
    width: 100%;
    height: 100%;
    align-items:center;
-   justify-content:space-around;
+   //justify-content:space-around;
    display:flex;
    flex-direction:column;
 
@@ -69,18 +70,7 @@ export const Centro = styled.div`
       display:flex;
          
             
-      .inputNovaSenha2{
-               
-         width: 48%;
-         height: 50px;
-         margin-top: 20px;
-         padding-left:10px;
-         border:none;
-         border-radius:10px;
-         font-size:25px;
-         box-shadow:10px 30px 90px rgba(112,112,112,0.2);
-         color:rgb(112,112,112);
-      };
+     
 
 
    };
@@ -88,8 +78,8 @@ export const Centro = styled.div`
    .inputNovaSenha{
    
       width: 95%;
-      height: 50px;
-      margin-top: 20px;
+      height: 80px;
+      margin-top: 60px;
       padding-left:10px;
       border:none;
       border-radius:10px;
@@ -102,9 +92,9 @@ export const Centro = styled.div`
  
    .inputDataNovaSenha{
    
-      margin-top: 0px;
+      margin-top: 5px;
       width: 95%;
-      height: 50px;
+      height: 80px;
       border:none;
       border-radius:10px;
       font-size:25px;
@@ -115,11 +105,11 @@ export const Centro = styled.div`
 
    .labelNovaSenha{
    
-      margin-top: 20px;
+      margin-top: 40px;
       width: 95%;
       height: 30px;
       border:none;
-      font-size:19px;
+      font-size:25px;
       padding-left:10px;
       color:rgb(112,112,112);
    
@@ -141,13 +131,14 @@ display:flex;
 .btnNovaSenha{
     
    width: 40%;
-    height: 68px;
+    height: 80px;
+    margin-top: -40px;
     border:none;
-    border-radius:40px;
+    border-radius:30px;
     box-shadow:10px 30px 90px rgba(112,112,112,0.2);
-    background:#6D3E5D;
+    background:#B24C4E;
     color: white;
-    font-size:25px;
+    font-size:30px;
     cursor:pointer;
  };
  .btnNovaSenha:hover{

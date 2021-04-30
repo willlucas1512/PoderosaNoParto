@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     max-width:100%;
-   height: 900px;
+   height: 880px;
     
     position: relative;
     align-items:center;
@@ -43,8 +43,8 @@ export const RightSide = styled.div`
 `
 export const Login = styled.div`
 
-width: 597px;
-height: 617px;
+width: 680px;
+height: 740px;
 display:flex;
 justify-content: center;
 align-items:center;

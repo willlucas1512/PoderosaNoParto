@@ -70,10 +70,10 @@ function Login() {
 
         if (mostrarSenha === "text")
 
-            return <IoIcons.IoEyeSharp size="40" />
+            return <IoIcons.IoEyeSharp color="#707070" size="40" />
         else
 
-            return <IoIcons.IoEyeOff size="40" />
+            return <IoIcons.IoEyeOff color="#707070" size="40" />
 
 
 
@@ -81,8 +81,10 @@ function Login() {
     return (
         <div>
             <S.Container>
+                <div id="senhas">
 
-                <input name="cpf" className="inputLogin" onChange={onChange} value={values.cpf} placeholder="Digite seu CPF"></input>
+                    <input name="cpf" className="inputLogin" onChange={onChange} value={values.cpf} placeholder="Digite seu CPF"></input>
+                </div>
                 <div id="senhas">
 
                     <input name="senha" type={mostrarSenha} className="inputLogin" onChange={onChange} value={values.senha} placeholder="Digite sua Senha"></input>
