@@ -1,16 +1,15 @@
 import React, { useContext } from 'react';
 import * as S from './styles.js'
-
-
 import ProgressoFraco from '../../assets/iconeProgressofraco.png'
 import ProgressoBom from '../../assets/iconeProgressoBom.png'
 import ProgressoRegular from '../../assets/iconeProgressoRegular.png'
 import ProgressoExcelente from '../../assets/iconeProgressoExcelente.png'
-
-import iconeRespiracao from '../../assets/iconePretoRespiracao2.png'
 import BotoesExercicios from './../BotoesExerciciosTelaAtividade'
 import * as MdIcons from "react-icons/md";
 import StoreContext from './../Store/Context';
+
+
+
 function ConteudoTelaAtividade(props) {
 
     const { nomeUsuario } = useContext(StoreContext);
@@ -21,47 +20,111 @@ function ConteudoTelaAtividade(props) {
     const nome = nomeArray[0]
 
     var data = new Date();
-    var dia = data.getDate();
+    var numerodia = data.getDate();
+    var dia
     var numeromes = data.getMonth();
     var mes
     var ano = data.getFullYear();
 
-    if (numeromes === 0) {
-        mes = "01"
+    function numeroMes(numeromes) {
+        if (numeromes === 0) {
+            var mes = "01"
+            return mes
+        }
+        if (numeromes === 1) {
+            var mes = "02"
+            return mes
+        }
+        if (numeromes === 2) {
+            var mes = "03"
+            return mes
+        }
+        if (numeromes === 3) {
+            var mes = "04"
+            return mes
+        }
+        if (numeromes === 4) {
+            var mes = "05"
+            return mes
+        }
+        if (numeromes === 5) {
+            var mes = "06"
+            return mes
+        }
+        if (numeromes === 6) {
+            var mes = "07"
+            return mes
+        }
+        if (numeromes === 7) {
+            var mes = "08"
+            return mes
+        }
+        if (numeromes === 8) {
+            var mes = "09"
+            return mes
+        }
+        if (numeromes === 9) {
+            var mes = "10"
+            return mes
+        }
+        if (numeromes === 10) {
+            var mes = "11"
+            return mes
+        }
+        if (numeromes === 11) {
+            var mes = "12"
+            return mes
+        }
+
     }
-    if (numeromes === 1) {
-        mes = "02"
+    function numeroDia(numerodia) {
+
+        if (numerodia === 1) {
+            var dia = "01"
+            return dia
+        }
+        else if (numerodia === 2) {
+            var dia = "02"
+            return dia
+        }
+        else if (numerodia === 3) {
+            var dia = "03"
+            return dia
+        }
+        else if (numerodia === 4) {
+            var dia = "04"
+            return dia
+        }
+        else if (numerodia === 5) {
+            var dia = "05"
+            return dia
+        }
+        else if (numerodia === 6) {
+            var dia = "06"
+            return dia
+        }
+        else if (numerodia === 7) {
+            var dia = "07"
+            return dia
+        }
+        else if (numerodia === 8) {
+            var dia = "08"
+            return dia
+        }
+        else if (numerodia === 9) {
+            var dia = "09"
+            return dia
+        } else {
+            var dia = numerodia
+            return dia
+
+        }
+
+
     }
-    if (numeromes === 2) {
-        mes = "03"
-    }
-    if (numeromes === 3) {
-        mes = "04"
-    }
-    if (numeromes === 4) {
-        mes = "05"
-    }
-    if (numeromes === 5) {
-        mes = "06"
-    }
-    if (numeromes === 6) {
-        mes = "07"
-    }
-    if (numeromes === 7) {
-        mes = "08"
-    }
-    if (numeromes === 8) {
-        mes = "09"
-    }
-    if (numeromes === 9) {
-        mes = "10"
-    }
-    if (numeromes === 10) {
-        mes = "11"
-    }
-    if (numeromes === 11) {
-        mes = "12"
-    }
+
+    mes = numeroMes(numeromes)
+    dia = numeroDia(numerodia)
 
     function image(tarefaPendentes) {
 
@@ -87,7 +150,7 @@ function ConteudoTelaAtividade(props) {
 
             <S.Container >
                 <S.LeftSide >
-                    <label>Olá, {nome}</label>
+                    <label>Olá, {nome}!</label>
                     <img src={image(props.tarefasPendentes)} alt="Imagem Progresso Excelente" />
                 </S.LeftSide>
                 <S.RigthSide

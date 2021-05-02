@@ -86,6 +86,7 @@ function ConteudoTelaCadastro() {
             setMostrarSenha("text")
         }
     }
+
     function iconeSenha() {
 
         if (mostrarSenha === "text")
@@ -98,6 +99,7 @@ function ConteudoTelaCadastro() {
 
 
     }
+
     function mostrarOConfirmarSenha() {
 
         if (mostrarConfirmarSenha == "text") {
@@ -107,6 +109,7 @@ function ConteudoTelaCadastro() {
             setMostrarConfirmarSenha("text")
         }
     }
+
     function iconeConfirmarSenha() {
 
         if (mostrarConfirmarSenha === "text")

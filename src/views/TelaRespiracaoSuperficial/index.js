@@ -14,7 +14,7 @@ function TelaRespiracaoSuperficial() {
         <S.Container >
 
             <Header />
-            <ConteudoTelasExercicios exercicio="Respiracao Superficial" video={Video} />
+            <ConteudoTelasExercicios exercicio="Respiração Superficial" video={Video} />
             <Footer />
         </S.Container>
 

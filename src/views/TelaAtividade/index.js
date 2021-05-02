@@ -24,7 +24,7 @@ function TelaAtividade() {
 
     async function loadTasks() {
 
-        await api.get(`/task/exercicioDoDia/${cpf}/${"Respiracao Superficial"}`)
+        await api.get(`/task/exercicioDoDia/${cpf}/${"Respiração Superficial"}`)
             .then(response => {
                 if (response.data !== null) {
                     setRespiracaoSuperficialDoDia(true);
@@ -34,7 +34,7 @@ function TelaAtividade() {
                 }
             })
 
-        await api.get(`/task/exercicioDoDia/${cpf}/${"Respiracao Profunda"}`)
+        await api.get(`/task/exercicioDoDia/${cpf}/${"Respiração Profunda"}`)
             .then(response => {
                 if (response.data !== null) {
                     setRespiracaoProfundaDoDia(true);

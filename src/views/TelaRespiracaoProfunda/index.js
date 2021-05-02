@@ -13,7 +13,7 @@ function TelaRespiracaoProfunda() {
         <S.Container >
 
             <Header />
-            <ConteudoTelasExercicios exercicio="Respiracao Profunda" video={Video} />
+            <ConteudoTelasExercicios exercicio="Respiração Profunda" video={Video} />
             <Footer />
         </S.Container>
 

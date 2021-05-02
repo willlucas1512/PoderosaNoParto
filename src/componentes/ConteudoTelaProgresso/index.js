@@ -32,11 +32,11 @@ function ConteudoTelaProgresso() {
 
                 for (var i = 0; i < response.data.length; i++) {
 
-                    if (response.data[i].titulo == "Respiracao Superficial") {
+                    if (response.data[i].titulo == "Respiração Superficial") {
                         RespiracaoSuperficial = RespiracaoSuperficial + 1
 
                     }
-                    if (response.data[i].titulo == "Respiracao Profunda") {
+                    if (response.data[i].titulo == "Respiração Profunda") {
                         RespiracaoProfunda = RespiracaoProfunda + 1
 
                     }
