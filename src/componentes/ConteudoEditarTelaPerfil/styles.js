@@ -11,7 +11,7 @@ export const Container = styled.div`
    
 
 `
-export const Perfil = styled.div`
+export const EditarPerfil = styled.div`
    
    width: 1400px;
    height: 85%;
@@ -30,14 +30,15 @@ export const TopSide = styled.div`
    margin-top:20px;
    margin-bottom:20px;
    height: 67px;
+   top:0px;
 
    display:flex;
    justify-content: center;
 
    a{
     
-    
-      width: 140px;
+
+      width: 330px;
       height: 67px;
       font-size:60px;
       font-weight: bold;
@@ -48,7 +49,6 @@ export const TopSide = styled.div`
 
 `
 export const Centro = styled.div`
-
    width: 100%;
    height: 459px;
    display:flex;
@@ -57,15 +57,15 @@ export const Centro = styled.div`
 
 `
 export const Form1 = styled.div`
-   width: 690px;
+ width: 690px;
    height: 459px;
   
    justify-content: space-around;
    display:flex;
    flex-direction:column;
-  
-   .labelPerfil{
-  
+   
+   .inputEditarPerfil{
+   
       width: 650px;
   height: 50px;
   display:flex;
@@ -78,14 +78,15 @@ export const Form1 = styled.div`
   padding-left:10px;
   box-shadow:10px 30px 90px rgba(112,112,112,0.2);
   color:rgb(112,112,112);
+   };
 
-};
-   
   
+   
+
 
 `
 export const Form2 = styled.div`
-
+  
 width: 690px;
    height: 459px;
   
@@ -93,27 +94,25 @@ width: 690px;
    display:flex;
    flex-direction:column;
 
-.labelPerfil{
-   
+.inputEditarPerfil{
+  
    width: 650px;
-   height: 50px;
-   display:flex;
+  height: 50px;
+  display:flex;
   align-items:center;
-   margin-top: 20px;
-   margin-left:20px;
-   border:none;
-   border-radius:10px;
-   font-size:25px;
-   padding-left:10px;
-   box-shadow:10px 30px 90px rgba(112,112,112,0.2);
-   color:rgb(112,112,112);
+  margin-top: 20px;
+  margin-left:20px;
+  border:none;
+  border-radius:10px;
+  font-size:25px;
+  padding-left:10px;
+  box-shadow:10px 30px 90px rgba(112,112,112,0.2);
+  color:rgb(112,112,112);
 
  };
 
-
 `
 export const BottomSide = styled.div`
-
    width: 100%;
    height:280px;
    flex-direction:column;
@@ -134,7 +133,7 @@ export const BottomSide = styled.div`
          }
 
    }
-   .btnEditarPerfil{
+   .btnCadastrar{
       margin-bottom:50px;
       width: 50%;
       height: 68px;

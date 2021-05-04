@@ -91,7 +91,12 @@ export const Form1 = styled.div`
       font-size:25px;
       box-shadow:10px 30px 90px rgba(112,112,112,0.2);
       color:rgb(112,112,112);
+    
    };
+   .DatePicker :popper{
+      width: 400px;
+      
+   }
    .inputDataCadastro{
    
      

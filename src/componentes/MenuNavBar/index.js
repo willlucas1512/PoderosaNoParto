@@ -35,7 +35,7 @@ function Navbar() {
                             <Link to={'/TelaPerfil'} >
 
                                 <a > <MdIcons.MdAccountCircle /></a>
-                                <span >{'Editar Perfil'}</span>
+                                <span >{'Perfil'}</span>
                             </Link>
 
 

@@ -1,15 +1,13 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import * as S from './styles.js'
 import api from '../../services/api';
 import StoreContext from './../Store/Context';
 
 function ConteudoTelaPerfil() {
-    const data = new Date()
-    const datamenosfuso = new Date(data.valueOf() - data.getTimezoneOffset() * 60000)
-    const dataConvertida = datamenosfuso.toISOString().replace(/\ .\d{3}Z$/, '')
+
 
     const initialUserState = {
-        id: null,
+
         nome: "",
         cpf: "",
         sexo: "",
@@ -17,35 +15,27 @@ function ConteudoTelaPerfil() {
         email: "",
         raca: "",
         dataNasc: "",
-        ultMest: "",
-        modificed: dataConvertida
+        ultMest: ""
+
     };
 
     const [user, setUser] = useState(initialUserState);
     const { idUsuario } = useContext(StoreContext);
 
-    const handleInputChange = event => {
-        const { name, value } = event.target;
-        setUser({ ...user, [name]: value });
-    };
 
-    const saveUser = async () => {
-        var data = {
-            nome: user.nome,
-            cpf: user.cpf,
-            sexo: user.sexo,
-            cep: user.cep,
-            email: user.email,
-            raca: user.raca,
-            dataNasc: `${user.dataNasc}T23:40:00.000+00:00`,
-            ultMest: `${user.ultMest}T23:40:00.000+00:00`,
-            modificed: user.modificed
+    const PerfilUser = async () => {
 
-        };
-        await api.put(`/user/${idUsuario}`, data)
+        await api.post(`/user/perfil/${idUsuario}`)
 
             .then(response => {
-                setUser({
+
+                function converterData(dataDoBanco) {
+                    const dataNascPrimeiroDivisao = dataDoBanco.split("T")
+                    const dataNascSegundaDivisao = dataNascPrimeiroDivisao[0].split("-")
+                    const dataNascFinal = (dataNascSegundaDivisao[2] + "/" + dataNascSegundaDivisao[1] + "/" + dataNascSegundaDivisao[0])
+                    return dataNascFinal
+                }
+                var dataBanco = {
 
                     nome: response.data.nome,
                     cpf: response.data.cpf,
@@ -55,136 +45,48 @@ function ConteudoTelaPerfil() {
                     raca: response.data.raca,
                     dataNasc: response.data.dataNasc,
                     ultMest: response.data.ultMest,
-                    modificed: response.data.modificed
 
-                });
 
-                window.location.replace("/TelaAtividade")
+                };
+                dataBanco.dataNasc = converterData(dataBanco.dataNasc)
+                dataBanco.ultMest = converterData(dataBanco.ultMest)
+                setUser(dataBanco)
+
+
 
             })
             .catch(e => {
 
-                console.log("Erro ao Alterar");
+                console.log("Erro ao carregar perfil");
             });
 
     };
 
+    useEffect(() => { PerfilUser() }, 1)
     return (
         < div >
             <S.Container >
 
-                <S.Cadastro >
+                <S.Perfil >
 
                     <S.TopSide >
 
-                        <a> Editar Perfil </a>
+                        <a> Perfil </a>
                     </S.TopSide>
                     <S.Centro >
                         <S.Form1 >
-                            <input type="text"
-                                className="inputCadastro"
-                                placeholder="Nome Completo"
-                                id="nome"
-                                required value={user.nome}
-                                onChange={handleInputChange}
-                                name="nome" >
-                            </input>
+                            <label className="labelPerfil"  > Nome: {user.nome} </label>
+                            <label className="labelPerfil"  > CPF: {user.cpf} </label>
+                            <label className="labelPerfil"  > Sexo: {user.sexo} </label>
+                            <label className="labelPerfil"  >Data Nascimento: {user.dataNasc} </label>
 
-                            < input type="number"
-                                className="inputCadastro"
-                                placeholder="CPF"
-                                id="cpf"
-                                required value={user.cpf}
-                                onChange={handleInputChange}
-                                name="cpf" >
-
-                            </input>
-
-
-
-                            <select type="text"
-                                className="inputCadastro"
-                                placeholder="Sexo"
-                                id="sexo"
-                                required value={user.sexo}
-                                onChange={handleInputChange}
-                                name="sexo" >
-
-                                <option value="null" > Sexo </option>
-                                < option value="Feminino" > Feminino </option>
-                                <option value="Masculino" > Masculino </option>
-                                <option value="Outro" > Outro </option>
-
-                            </select>
-
-                            <label className="labelCadastro" > Data de Nascimento </label>
-
-                            < input type="date"
-                                className="inputDataCadastro"
-                                id="dataNasc"
-                                required value={user.dataNasc}
-                                onChange={handleInputChange}
-                                name="dataNasc"
-
-                            >
-                            </input>
                         </S.Form1>
 
                         <S.Form2 >
-                            <input type="text"
-                                className="inputCadastro"
-                                placeholder="CEP"
-                                id="cep"
-                                required value={user.cep}
-                                onChange={handleInputChange}
-                                name="cep" >
-
-                            </input>
-
-                            < input type="text"
-                                className="inputCadastro"
-                                placeholder="E-mail"
-                                id="email"
-                                required value={user.email}
-                                onChange={handleInputChange}
-                                name="email"
-
-                            >
-                            </input>
-
-
-
-                            <select type="text"
-                                className="inputCadastro"
-                                placeholder="Raça/Cor"
-                                id="raca"
-                                required value={user.raca}
-                                onChange={handleInputChange}
-                                name="raca"
-
-
-                            >
-                                <option selected value="null" > Raça / Cor </option>
-                                <option value="Preta" > Preta </option>
-                                <option value="Branca" > Branca </option>
-                                <option value="Parda" > Parda </option>
-                                <option value="Indígena" > Indígena </option>
-                                <option value="Amarela" > Amarela </option>
-                            </select>
-
-                            <label className="labelCadastro" > Última Mestruação </label>
-
-                            <input type="date"
-                                className="inputDataCadastro"
-                                placeholder="Última Mestruação"
-                                id="ultMest"
-                                required value={user.ultMest}
-                                onChange={handleInputChange}
-                                name="ultMest"
-
-
-                            >
-                            </input>
+                            <label className="labelPerfil"  > CEP: {user.cep} </label>
+                            <label className="labelPerfil"  > Email: {user.email} </label>
+                            <label className="labelPerfil"  > Raça/Cor: {user.raca} </label>
+                            <label className="labelPerfil"  > Última Mestruação: {user.ultMest} </label>
 
                         </S.Form2>
 
@@ -193,11 +95,11 @@ function ConteudoTelaPerfil() {
                     <S.BottomSide >
 
 
-                        <button className="btnCadastrar" onClick={saveUser} > Alterar </button>
+                        <button className="btnEditarPerfil" onClick={() => { window.location.replace("TelaEditarPerfil") }} > Editar Perfil </button>
 
                     </S.BottomSide>
 
-                </S.Cadastro>
+                </S.Perfil>
 
             </S.Container>
 

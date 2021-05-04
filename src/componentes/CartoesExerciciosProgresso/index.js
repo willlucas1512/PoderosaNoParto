@@ -5,7 +5,13 @@ import * as GiIcons from 'react-icons/gi';
 import * as MdIcons from "react-icons/md";
 
 function CartoesExerciciosProgresso({ titulo, duracao, finalizada }) {
-    const date = useMemo(() => format(new Date(finalizada), 'dd/MM/yyyy'));
+    function converterData(dataDoBanco) {
+        const dataNascPrimeiroDivisao = dataDoBanco.split("T")
+        const dataNascSegundaDivisao = dataNascPrimeiroDivisao[0].split("-")
+        const dataNascFinal = (dataNascSegundaDivisao[2] + "/" + dataNascSegundaDivisao[1] + "/" + dataNascSegundaDivisao[0])
+        return dataNascFinal
+    }
+    const date = converterData(finalizada)
 
     function iconeExercicio() {
 
