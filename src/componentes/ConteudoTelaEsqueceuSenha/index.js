@@ -2,10 +2,11 @@ import React, { useState, useContext } from 'react';
 import * as S from './styles.js'
 import api from '../../services/api';
 import StoreContext from './../Store/Context'
-
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css'
 
 function initialState() {
-    return { cpf: '', email: '', dataNasc: "" }
+    return { cpf: '', email: '' }
 }
 
 function TestaCPF(strCPF) {
@@ -33,6 +34,7 @@ function TestaCPF(strCPF) {
 function ConteudoTelaEsqueceuSenha() {
     const { setIdUsuarioReset } = useContext(StoreContext);
     const [values, setValues] = useState(initialState);
+    const [dataNasc, setDataNasc] = useState(null);
     //Função onChange atualiza os valores dos inputs 
     function onChange(event) {
         const { value, name } = event.target;
@@ -57,10 +59,10 @@ function ConteudoTelaEsqueceuSenha() {
         else if (!values.email)
             return alert('email é obrigatório')
 
-        else if (!values.dataNasc)
+        else if (!dataNasc)
             return alert('Data de Nascimento é obrigatório')
         else {
-            await api.post("/user/" + `${values.cpf}` + "/" + `${values.email}` + "/" + `${values.dataNasc}` + "T23:40:00.000+00:00")
+            await api.post("/user/" + `${values.cpf}` + "/" + `${values.email}` + "/" + `${dataNasc}`)
 
                 .then((response) => {
                     if (response.data.valor === true) {
@@ -97,10 +99,23 @@ function ConteudoTelaEsqueceuSenha() {
                         <input name="email" type="text" className="inputNovaSenha" onChange={onChange} value={values.email} placeholder="E-mail"></input>
 
 
-                        <label className="labelNovaSenha" > Data de Nascimento </label>
+                        <DatePicker
+                            selected={dataNasc}
+                            dateFormat="dd/MM/yyyy"
 
-                        <input name="dataNasc" type="date" className="inputDataNovaSenha" onChange={onChange} value={values.dataNasc} ></input>
+                            onChange={date => setDataNasc(date)}
+                            className="inputNovaSenha"
+                            disabled={false}
+                            placeholderText="Data de Nascimento"
+                            peekNextMonth
+                            showMonthDropdown
+                            showYearDropdown
+                            dropdownMode="select"
+                            popperModifiers={{
+                                offset: "5px, 3px"
 
+                            }}
+                        />
 
 
 

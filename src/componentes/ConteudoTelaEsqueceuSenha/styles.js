@@ -58,28 +58,19 @@ export const Centro = styled.div`
 
    width: 100%;
    height: 100%;
-   align-items:center;
+  // align-items:center;
    //justify-content:space-around;
    display:flex;
    flex-direction:column;
 
-   li {
-      width: 97%;
-      list-style:none;
-      justify-content: space-around;
-      display:flex;
-         
-            
-     
-
-
-   };
+   
 
    .inputNovaSenha{
-   
+      
       width: 95%;
       height: 80px;
       margin-top: 60px;
+      margin-left: 30px;
       padding-left:10px;
       border:none;
       border-radius:10px;
@@ -87,35 +78,7 @@ export const Centro = styled.div`
       box-shadow:10px 30px 90px rgba(112,112,112,0.2);
       color:rgb(112,112,112);
    };
-
-
- 
-   .inputDataNovaSenha{
-   
-      margin-top: 5px;
-      width: 95%;
-      height: 80px;
-      border:none;
-      border-radius:10px;
-      font-size:25px;
-      padding-left:10px;
-      box-shadow:10px 30px 90px rgba(112,112,112,0.2);
-      color:rgb(112,112,112);
-   };
-
-   .labelNovaSenha{
-   
-      margin-top: 40px;
-      width: 95%;
-      height: 30px;
-      border:none;
-      font-size:25px;
-      padding-left:10px;
-      color:rgb(112,112,112);
-   
-   
-   };
-   
+  
 
 
 `

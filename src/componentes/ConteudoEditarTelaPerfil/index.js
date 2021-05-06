@@ -60,9 +60,9 @@ function ConteudoEditarTelaPerfil() {
                 window.location.replace("/TelaAtividade")
 
             })
-            .catch(e => {
+            .catch((error) => {
 
-                console.log("Erro ao Alterar");
+                alert(error.response.data);
             });
 
     };
