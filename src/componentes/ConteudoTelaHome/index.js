@@ -2,23 +2,29 @@ import React from 'react';
 import * as S from './styles.js'
 import Login from '../../componentes/Login'
 import Image from '../../assets/logoInicial.png'
+import 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 function ConteudoTelaHome() {
     return (
-        <div>
-            <S.Container>
-                <S.LeftSide>
+        <div className="container">
+            <div class="row">
+                <div class="col-md-1">
+
                     <img src={Image} />
 
-                </S.LeftSide>
-                <S.RightSide>
 
-                    <S.Login>
-                        <Login />
+                </div>
+                <div class="col-md-1">
 
-                    </S.Login>
-                </S.RightSide>
 
-            </S.Container>
+
+                    <Login />
+
+
+
+                </div>
+
+            </div>
 
         </div>
 

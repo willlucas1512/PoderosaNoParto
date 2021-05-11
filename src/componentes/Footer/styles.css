@@ -1,0 +1,26 @@
+.footer {
+    flex-shrink: 0;
+    text-align: center;
+    background:#6D3E5D;
+    display: flex;
+    position: relative;
+}
+a{
+    color: white;
+    font-weight: bold;
+    text-decoration:none;
+    margin: 0 10px;
+    font-size:23px;
+    
+   
+    
+    };
+   a:hover{
+        color: #C79518;
+    }
+    .dividir::after{
+        content:"|";
+        color: white;
+        margin:0 5px;
+        
+        }

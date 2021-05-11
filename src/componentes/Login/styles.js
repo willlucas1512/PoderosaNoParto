@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-width: 500px;
-height: 580px;
-
-
+width: 800px;
+height: 780px;
+padding:20px;
 display:flex;
 flex-direction:column;
 align-items:center;
 justify-content: center;
+border-radius:5%;
+box-shadow:2px 2px 10px #707070;
 
 #senhas{
       display:flex;
@@ -53,7 +54,7 @@ margin-left:-65px;
     margin-top: 30px;
  color:white ;
     //margin-bottom: 20px;
-    width: 479px;
+    width: 679px;
     height: 100px;
     border:none;
     border-radius:40px;
@@ -65,7 +66,7 @@ margin-left:-65px;
 
  .btnCadastre_se{
     margin-top: 35px;
-    width: 308px;
+    width: 508px;
     height: 94px;
     border:none;
     border-radius:10px;

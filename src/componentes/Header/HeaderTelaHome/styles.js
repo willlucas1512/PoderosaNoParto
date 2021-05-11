@@ -1,18 +1,17 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-width: 100%;//1920px;
-height: 100px;
 background:#6D3E5D;
 border-bottom: 10px solid #C79518;
-display:flex;
-position:relative;
+height:130px;
+
 
 img{
-margin-top:20px;
+
 margin-left:10px;
 width:486px;
 height:80px;
+
 
 };
 
@@ -21,12 +20,6 @@ height:80px;
 `
 
 export const Menu = styled.div`
-
-width:1920px;
-height: 56px;
-display:flex;
-align-items: center;
-
 
 .dividir::after{
     content:"|"; 
