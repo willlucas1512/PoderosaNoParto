@@ -1,28 +1,25 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-   width: 100%;//1920px;
-   height: 864px;
+    max-width:100%;
+   min-height:870px;
     
     position: relative;
     align-items:center;
+    justify-content: space-around;
     display:flex;
-    //align-items:center;
-    justify-content: center;
-    display:flex;
+    flex-wrap: wrap;
 
 
 
 `
 export const LeftSide = styled.div`
-    width:960px;
+   width: 900px;
     height:850px;
-    margin-left:50px;
     display:flex;
     align-items:center;
     justify-content: center;
     flex-direction:column;
-  
 
   img{
     width: 831px;
@@ -53,9 +50,8 @@ export const LeftSide = styled.div`
 `
 export const RigthSide = styled.div`
 
-width:960px;
+width: 900px;
     height:850px;
-  
     align-items:center;
     justify-content: center;
     display:flex;

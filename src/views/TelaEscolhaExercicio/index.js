@@ -1,5 +1,5 @@
 import React from 'react';
-import * as S from './styles.js'
+
 
 
 //nossos componentes
@@ -10,12 +10,12 @@ import ConteudoTelaEscolhaExercicio from '../../componentes/ConteudoTelaEscolhaE
 function TelaEscolhaExercicio() {
     return (
 
-        <S.Container >
+        < >
 
             <Header />
             <ConteudoTelaEscolhaExercicio />
             <Footer />
-        </S.Container>
+        </>
 
 
     )

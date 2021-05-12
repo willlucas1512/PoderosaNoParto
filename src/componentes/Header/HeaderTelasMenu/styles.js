@@ -2,15 +2,10 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 
-align-items:center;
-
-
-width: 100%;//1920px;
-height: 100px;
 background:#6D3E5D;
 border-bottom: 10px solid #C79518;
-display:flex;
-position:relative;
+height:130px;
+
 
 
 `
@@ -23,33 +18,26 @@ display:flex;
 align-items:center;
 
 img{
-  
-margin-top:10px;
+
+margin-top:30px;
 margin-left:10px;
-width:486px;
+width:430px;
 height:80px;
     
     }
+    .navegacoes{
+        display:flex;
+        width:82%;
     
+        align-items:center;
+        justify-content: center;
+    }
 
 `
-export const RightSide = styled.div`
-width:100%;//960px;
-height:100%;//905px;
 
-align-items:center;
-
-display:flex;
-
-
-`
 
 export const Menu = styled.div`
 
-width:1920px;
-height: 56px;
-display:flex;
-align-items: center;
 
 
 .dividir::after{

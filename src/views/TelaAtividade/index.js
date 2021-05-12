@@ -1,5 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
-import * as S from './styles.js'
+import React, { useContext, useEffect } from 'react';
 import StoreContext from './../../componentes/Store/Context'
 import api from '../../services/api';
 //nossos componentes
@@ -86,13 +85,13 @@ function TelaAtividade() {
 
     return (
 
-        <S.Container >
+        < >
 
             <Header />
             <ConteudoTelaAtividade tarefasPendentes={numeroTarefasPendentes} />
 
             <Footer />
-        </S.Container>
+        </>
 
 
     )

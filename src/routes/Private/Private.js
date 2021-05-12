@@ -8,7 +8,7 @@ const RoutesPrivate = ({ children, ...rest }) => {
   return (
     <Route
       {...rest}
-      render={({ location }) => (token && token !== null)
+      render={({ location }) => (token !== null)
         ? (children)
         : (<Redirect
           to={{

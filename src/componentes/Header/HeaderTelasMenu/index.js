@@ -17,13 +17,12 @@ function HeaderTelasMenu() {
 
                 <S.LeftSide>
                     <img src={logo} />
+                    <div className="navegacoes">
+                        <BellNavBar numeroTarefasPendentes={numeroTarefasPendentes} />
+                        <Navbar />
+                    </div>
                 </S.LeftSide>
-                <S.RightSide>
 
-                    <BellNavBar numeroTarefasPendentes={numeroTarefasPendentes} />
-                    <Navbar />
-
-                </S.RightSide>
 
             </S.Container>
             <S.Menu>
