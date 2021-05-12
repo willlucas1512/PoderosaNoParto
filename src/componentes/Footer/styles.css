@@ -4,6 +4,8 @@
     background:#6D3E5D;
     display: flex;
     position: relative;
+    align-items:center;
+justify-content: center;
 }
 a{
     color: white;

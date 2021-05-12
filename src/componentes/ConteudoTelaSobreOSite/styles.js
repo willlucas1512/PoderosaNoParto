@@ -3,39 +3,43 @@ import styled from 'styled-components';
 export const Container = styled.div`
    
    width: 100%;//1920px;
-   height: 864px;
-   display:flex;
-   align-items:center;
-   justify-content: center;
-  
+   min-height:850px;
+   position: relative;
+    align-items:center;
+    justify-content: space-around;
+    display:flex;
+
    
 
 `
 export const Conteudo = styled.div`
    flex-direction:column;
    width: 80%;
-   height: 85%;
+   max-height: 100%;
    padding:10px;
    display:flex;
+   flex-direction:column;
    border-radius:15px;
    box-shadow:10px 30px 90px rgba(112,112,112,0.7);
    color:rgb(112,112,112);
-   margin-top:-60px;
-   
+   margin-bottom:30px;
+   flex-wrap:wrap;
 
 `
 export const TopSide = styled.div`
+
    width: 100%;
    margin-top:20px;
    margin-bottom:20px;
-   height: 67px;
-   top:0px;
-   top:90px;
+   height: 97px;
+
    display:flex;
+   align-items:center;
    justify-content: center;
 
-   a{
-      width: 310px;
+   .a2{
+     
+      width: 350px;
       height: 67px;
       font-size:60px;
       font-weight: bold;
@@ -49,16 +53,14 @@ export const TopSide = styled.div`
 export const Centro = styled.div`
 
 width: 100%;
-   height:440px;
-   margin-top:-20px;
-   
-  
-
    display:flex;
+   justify-content: center;
+   flex-wrap:wrap;
    position: relative;
+   max-height: 100%;
    h3{
       width: 100%;
-      margin-top:-50px;
+     
       margin-bottom:10px;
       font-size:30px;
       text-align:start;

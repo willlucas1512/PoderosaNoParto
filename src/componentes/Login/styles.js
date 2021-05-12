@@ -86,14 +86,16 @@ margin-left:-65px;
     
     }
     a{
-width: 177px;
-   height: 22px;
+   width: 377px;
+   height: 30px;
+   display:flex;
+   justify-content:center;
         color: #3D80F3;
         font-size:23px;
         text-decoration:none;
         margin-top: 37px;
-margin-bottom: 37px;
-font-style:arial;
+         margin-bottom: 37px;
+       
         
         &:hover{
          text-decoration: underline;

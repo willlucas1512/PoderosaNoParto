@@ -1,5 +1,5 @@
 import React from 'react';
-import * as S from './styles.js'
+
 
 
 //nossos componentes
@@ -10,12 +10,12 @@ import ConteudoTelaEsqueceuSenha from '../../componentes/ConteudoTelaEsqueceuSen
 function TelaCadastro() {
     return (
 
-        <S.Container >
+        < >
 
             <Header />
             <ConteudoTelaEsqueceuSenha />
             <Footer />
-        </S.Container>
+        </>
 
 
     )

@@ -132,7 +132,7 @@ function ConteudoTelaCadastro() {
 
                     <S.TopSide >
 
-                        <a> Cadastro </a>
+                        <span> Cadastro </span>
                     </S.TopSide>
                     <S.Centro >
                         <S.Form1 >

@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
    
-   width: 100%;//1920px;
-   height: 864px;
+   max-width:100%;
+  min-height:850px;
    display:flex;
    align-items:center;
    justify-content: center;
@@ -14,7 +14,7 @@ export const Container = styled.div`
 export const NovaSenha = styled.div`
    
    width: 60%;
-   height: 80%;
+   height: 750px;
    padding:10px;
    display:flex;
    align-items:space-around;
@@ -35,14 +35,16 @@ export const TopSide = styled.div`
    top:90px;
    display:flex;
    justify-content: center;
-
-   a{
-     
-      width: 100%;
+   margin-bottom:20px;
+   span{
+   
+     text-align: center;
+      width: 600px;
+      height: 100px;
       display:flex;
       justify-content: center;
       align-items:center;
-      height: 67px;
+      
       font-size:60px;
       font-weight: bold;
       text-shadow: 0.1em 0.1em 0.2em rgba(112,112,112,0.5);//#707070 cinza

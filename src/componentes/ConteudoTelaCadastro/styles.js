@@ -2,19 +2,21 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
    
-   width: 100%;//1920px;
-   height: 864px;
-   display:flex;
-   align-items:center;
-   justify-content: center;
-
+   max-width:100%;
+  min-height:850px;
+    
+    position: relative;
+    align-items:center;
+    justify-content: space-around;
+    display:flex;
+padding:45px;
    
 
 `
 export const Cadastro = styled.div`
    
-   width: 80%;
-   height: 85%;
+   width:1600px;
+   max-height: 100%;
    padding:10px;
    display:flex;
    flex-direction:column;
@@ -30,12 +32,11 @@ export const TopSide = styled.div`
    margin-top:20px;
    margin-bottom:20px;
    height: 67px;
-   top:0px;
-   top:90px;
    display:flex;
    justify-content: center;
 
-   a{
+   span{
+      text-decoration:none;
       width: 260px;
       height: 67px;
       font-size:60px;
@@ -49,10 +50,11 @@ export const TopSide = styled.div`
 export const Centro = styled.div`
 
    width: 100%;
-   height: 400px;
    display:flex;
-   flex-direction:in-line;
    justify-content: center;
+   flex-wrap:wrap;
+   position: relative;
+   max-height: 100%;
    #senhas{
       width: 100%;
       height: 80px;
@@ -73,10 +75,7 @@ margin-left:-55px;
 
 `
 export const Form1 = styled.div`
-   width: 100%;
-   height: 459px;
-   margin-left:124px;
-   margin-right:109px;
+   width: 700px;
    display:flex;
    flex-direction:column;
    
@@ -128,11 +127,10 @@ export const Form1 = styled.div`
 
 `
 export const Form2 = styled.div`
-   width: 90%;
-   height: 459px;
-   margin-right:124px;
+   width: 700px;
    flex-direction:column;
    display:flex;
+  
 
 .inputCadastro{
   
@@ -184,6 +182,7 @@ export const BottomSide = styled.div`
       align-items:center;
       justify-content: center;
       display:flex;
+      flex-wrap: wrap;
          a{
          margin-left:5px;
          margin-right:5px;

@@ -4,7 +4,7 @@ import logo from '../../../assets/logo.png'
 
 function Header() {
     return (
-        <div>
+        <div className="d-flex flex-column flex-md-column  mb-3  ">
             <S.Container>
                 <img src={logo} />
             </S.Container>

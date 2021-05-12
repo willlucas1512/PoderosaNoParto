@@ -7,7 +7,7 @@ height:130px;
 
 
 img{
-
+margin-top:30px;
 margin-left:10px;
 width:486px;
 height:80px;

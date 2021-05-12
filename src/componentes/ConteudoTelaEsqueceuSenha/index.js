@@ -90,7 +90,7 @@ function ConteudoTelaEsqueceuSenha() {
 
                 <S.NovaSenha>
                     <S.TopSide>
-                        <a > Confirme seus dados </a>
+                        <span > Confirme seus dados </span>
                     </S.TopSide>
                     <S.Centro >
 

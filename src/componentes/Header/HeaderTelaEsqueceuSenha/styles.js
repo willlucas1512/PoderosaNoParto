@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-width: 100%;//1920px;
-height: 100px;
 background:#6D3E5D;
-border-bottom: 10px solid  #C79518; //dourado
-display:flex;
+border-bottom: 10px solid #C79518;
+height:130px;
 
 img{
-margin-top:20px;
+margin-top:30px;
 margin-left:10px;
 width:486px;
 height:80px;
