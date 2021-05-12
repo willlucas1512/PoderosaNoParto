@@ -13,6 +13,7 @@ export const Container = styled.div`
 
 `
 export const Conteudo = styled.div`
+
    flex-direction:column;
    width: 80%;
    max-height: 100%;
@@ -83,13 +84,12 @@ width: 100%;
 `
 
 export const BottomSide = styled.div`
-   width: 95%;
-   height:180px;
-margin:40px;
+   width: 100%;
+   min-height:180px;
    align-items:center;
    justify-content: center;
    display:flex;
-  
+ 
    h3{
      
       width: 100%;

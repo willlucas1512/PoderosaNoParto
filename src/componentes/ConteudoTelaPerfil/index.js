@@ -71,7 +71,7 @@ function ConteudoTelaPerfil() {
 
                     <S.TopSide >
 
-                        <a> Perfil </a>
+                        <span> Perfil </span>
                     </S.TopSide>
                     <S.Centro >
                         <S.Form1 >

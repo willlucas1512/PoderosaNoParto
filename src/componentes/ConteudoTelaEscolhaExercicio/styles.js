@@ -1,15 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 100%;//1920px;
-   height: 864px;
-    
-    position: relative;
-    align-items:center;
-    display:flex;
-    //align-items:center;
-    justify-content: center;
-    display:flex;
+      max-width:100%;
+  min-height:870px;
+  
+  padding:20px;
+   display:flex;
+   align-items:center;
+    justify-content:center;
+  background:yellow;
 
 `
 export const Escolha = styled.div`

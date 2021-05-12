@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 
-    width: 730px;
+    max-width: 730px;
     height: 90px;
     display:flex;
     align-items:center;
@@ -17,18 +17,20 @@ export const LeftSide = styled.div`
     display:flex;
     align-items:center;
     justify-content: center;
+    
 
 `
 
 export const CenterSide = styled.div`
 
-    width: 400px;
+    max-width: 300px;
     height: 78px;
     margin-left:30px;
     padding-left:10px;
     display:flex;
     flex-direction:column;
     justify-content: center;
+  
 
 `
 export const TopCenterSide = styled.div`
@@ -41,8 +43,8 @@ export const TopCenterSide = styled.div`
 
 `
 export const BottomCenterSide = styled.div`
-
-    width:430px;
+ 
+    width:280px;
     height:38px;
     margin-left:10px;
     font-size:30px;

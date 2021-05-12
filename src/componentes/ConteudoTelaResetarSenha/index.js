@@ -112,7 +112,7 @@ function ConteudoTelaResetarSenha() {
 
                 <S.NovaSenha>
                     <S.TopSide>
-                        <a > Gere uma nova senha </a>
+                        <span > Gere uma nova senha </span>
                     </S.TopSide>
                     <S.Centro >
 

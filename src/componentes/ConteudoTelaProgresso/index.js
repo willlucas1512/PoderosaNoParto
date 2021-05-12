@@ -79,18 +79,19 @@ function ConteudoTelaProgresso() {
 
 
                     </S.TopSide>
-                    < S.divisao > _____________________________________________________________________________________________________________________________________________________________________________
-                     <div id="labels">
-                            < h1> Atividades Realizadas </h1>
-                            < h1 > Estatísticas </h1>
-
-                        </div>
+                    < S.divisao > 
+                    _____________________________________________________________________________________________________________________________________________________________________________
+                 
 
                     </S.divisao>
 
                     <S.Centro >
                         <S.LeftSideCentro >
+                        <div id="labels">
+                            < h1> Atividades Realizadas </h1>
+                           
 
+                        </div>
 
                             <S.Scroll >
 
@@ -115,7 +116,11 @@ function ConteudoTelaProgresso() {
                         </S.LeftSideCentro>
 
                         <S.RightSideCentro >
+                        <div id="labels">
+                           
+                            < h1 > Estatísticas </h1>
 
+                        </div>
                             <GraficoTelaProgresso
                                 graficoRespiracaoSuperficial={graficoRespiracaoSuperficial}
                                 graficoRespiracaoProfunda={graficoRespiracaoProfunda}

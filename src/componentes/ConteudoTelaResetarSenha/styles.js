@@ -2,50 +2,54 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
    
-   width: 100%;//1920px;
-   height: 905px;
+   max-width:100%;
+  min-height:860px;
+  
+  padding:20px;
    display:flex;
    align-items:center;
-   justify-content: center;
+    justify-content:center;
 
    
 
 `
 export const NovaSenha = styled.div`
    
-   width: 60%;
-   height: 80%;
-   padding:10px;
+   max-width:1600px;
+   min-height: 800px;
+  padding:50px;
    display:flex;
-   align-items:space-around;
    flex-direction:column;
    border-radius:15px;
    box-shadow:10px 30px 90px rgba(112,112,112,0.7);
    color:rgb(112,112,112);
-   margin-top:-60px;
 
    
 
 `
 export const TopSide = styled.div`
 
-   width: 100%;
+width: 100%;
    height: 10%;
-   margin-top: 70px;
+   top:0px;
+   top:90px;
    display:flex;
    justify-content: center;
-
-   a{
+   margin-bottom:20px;
+   span{
      
-      width: 100%;
+      text-align: center;
+      width: 600px;
+      height: 100px;
       display:flex;
       justify-content: center;
       align-items:center;
-      height: 67px;
-      font-size:40px;
+      
+      font-size:60px;
       font-weight: bold;
       text-shadow: 0.1em 0.1em 0.2em rgba(112,112,112,0.5);//#707070 cinza
-      color:#6D3E5D;//rgba(246,142,134,1) rosa
+      color:#B24C4E;//rgba(246,142,134,1) rosa
+      margin-top:15px;
    }
 
 
@@ -54,26 +58,30 @@ export const TopSide = styled.div`
 
 export const Centro = styled.div`
 
-   width: 100%;
-   height: 100%;
-   align-items:center;
-   //justify-content:center;
+width: 100%;
+  min-height: 459px;
    display:flex;
+ 
+ align-items:center;
+   justify-content: center;
+   flex-wrap:wrap;
+
    flex-direction:column;
    #senhas{
+      
       display:flex;
       align-items:center;
       justify-content:center;
-    //  background:yellow;
-      width: 100%;
-      height: 130px;
+   
+      min-width: 100%;
+      min-height: 130px;
 
-display:flex;
-align-items:center;
+
+
 input{
   
  margin-top: 30px;
-  width: 60%;
+  width: 100%;
   height: 70px;
   border-radius:30px;
   font-size:19px;
@@ -104,13 +112,11 @@ margin-left:-65px;
 
 export const BottomSide = styled.div`
 width: 100%;
-height:20%;
-margin-top:-350px;
+min-height:100px;
 flex-direction:column;
 align-items:center;
 justify-content: center;
 display:flex;
-//background:green;
 .btnNovaSenha{
     background:green;
    width: 40%;

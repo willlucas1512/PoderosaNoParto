@@ -5,7 +5,7 @@ function ConteudoTelaMais() {
     return (
         <div>
             <S.Container>
-            <S.Centro>
+         
 
                 <S.LeftSide>
                     <h3>
@@ -32,7 +32,7 @@ function ConteudoTelaMais() {
                     </h3>
                 </S.LeftSide>
                 <S.RightSide>
-                  <h3>
+                  
                   <S.TopRightSide>
                   <a> Sumário: </a>
 
@@ -99,10 +99,10 @@ function ConteudoTelaMais() {
                  </p>
 
                  </S.Scroll >
-                  </h3>
+                  
 
                 </S.RightSide>
-                </S.Centro>
+             
             </S.Container>
 
         </div>

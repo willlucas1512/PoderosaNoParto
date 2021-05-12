@@ -1,46 +1,37 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 100%;//1920px;
-   height: 864px;
+     max-width:100%;
+  min-height:850px;
+    margin:10px;
     position: relative;
     align-items:center;
-    display:flex;
-    //align-items:center;
     justify-content: space-around;
     display:flex;
+    flex-wrap:wrap;
 
 
 `
 
-export const Centro = styled.div`
-
-margin-left:40px;
-  width: 2000px;
-  height: 800px;
-  display:flex;
-  
-  align-items: center;
-  justify-content: space-around;
-
-position: relative;
-`
 export const LeftSide = styled.div`
    
     width:900px;
     height:700px;
-    margin-left:50px;
+    margin:50px;
     display:flex;
-    
-    
+  
+    align-items:center;
+    justify-content:center;
     border-radius:5%;
 box-shadow:2px 2px 10px #707070;
 
 h3{
+  align-items:center;
+    justify-content:center;
       width: 95%;
-      height:700px;
-      margin-left:20px;
-     
+      min-height:600px;
+    
+
       font-size:30px;
      flex-direction:column;
     text-align:center;
@@ -52,14 +43,52 @@ h3{
 
 `
 export const RightSide = styled.div`
-
-width:900px;
-    height:680px;
-      align-items:center;
+min-width:900px;
+    min-height:700px;
+    margin:50px;
     display:flex;
+    align-items:center;
+  justify-content:center;
+   flex-direction:column;
+   
     border-radius:5%;
 box-shadow:2px 2px 10px #707070;
-padding:10px;
+
+  
+`
+export const TopRightSide = styled.div`
+  width:900px;
+    height:80px;
+
+display:flex;
+position: relative;
+align-items:center;
+
+a{
+ 
+    width:220px;
+    height:60px;
+    color:#A54786;
+    text-align:center;
+    font-size: 40px
+}
+
+
+`
+
+export const Scroll = styled.div`
+
+ width: 880px;
+ height: 560px;
+ margin:20px;
+ padding-top:20px;
+ padding-left:20px;
+
+display:flex;
+position: relative;
+flex-direction:column;
+
+overflow-y: auto;
 
 p{
     display:flex;
@@ -69,15 +98,15 @@ p{
 span{
 
 display:flex;
-margin-top:-250px;
-margin-left:30px;
+//margin-top:-250px;
+//margin-left:30px;
 position: relative;
 height: 70px;
 width:70px;
 color: black;
 font-weight: bold;
 font-size: 30px;
-margin-top:-20px;
+//margin-top:-20px;
 
 }
 a{
@@ -87,42 +116,14 @@ align-items:center;
 margin-left:40px;
 position: relative;
 height: 70px;
-width:460px;
+width:500px;
 color: black;
 font-weight: bold;
 font-size: 30px;
-margin-top:-20px;
+//margin-top:-20px;
 
 text-align:center;
 }
-  
 `
 
-export const Scroll = styled.div`
-  width:900px;
-    height:600px;
-//background:green;
-display:flex;
-position: relative;
-flex-direction:column;
-
-overflow-y: scroll;
-`
-export const TopRightSide = styled.div`
-  width:900px;
-    height:80px;
-
-display:flex;
-position: relative;
-
-a{
-    width:900px;
-    height:80px;
-    color:#A54786;
-    text-align:center;
-    font-size: 40px
-}
-
-
-`
 

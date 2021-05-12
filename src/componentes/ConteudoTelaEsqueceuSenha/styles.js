@@ -3,26 +3,26 @@ import styled from 'styled-components';
 export const Container = styled.div`
    
    max-width:100%;
-  min-height:850px;
+  min-height:860px;
+  
+  padding:20px;
    display:flex;
    align-items:center;
-   justify-content: center;
+    justify-content:center;
 
    
 
 `
 export const NovaSenha = styled.div`
    
-   width: 60%;
-   height: 750px;
-   padding:10px;
+   max-width:1600px;
+   min-height: 80%;
+  padding:50px;
    display:flex;
-   align-items:space-around;
    flex-direction:column;
    border-radius:15px;
    box-shadow:10px 30px 90px rgba(112,112,112,0.7);
    color:rgb(112,112,112);
-   margin-top:-60px;
 
    
 
@@ -58,11 +58,14 @@ export const TopSide = styled.div`
 
 export const Centro = styled.div`
 
-   width: 100%;
-   height: 100%;
-  // align-items:center;
-   //justify-content:space-around;
+width: 100%;
+  min-height: 459px;
    display:flex;
+ 
+ align-items:center;
+   justify-content: center;
+   flex-wrap:wrap;
+
    flex-direction:column;
 
    
@@ -72,7 +75,7 @@ export const Centro = styled.div`
       width: 95%;
       height: 80px;
       margin-top: 60px;
-      margin-left: 30px;
+     
       padding-left:10px;
       border:none;
       border-radius:10px;
@@ -87,7 +90,7 @@ export const Centro = styled.div`
 
 export const BottomSide = styled.div`
 width: 100%;
-height:20%;
+min-height:100px;
 flex-direction:column;
 align-items:center;
 justify-content: center;
@@ -97,7 +100,7 @@ display:flex;
     
    width: 40%;
     height: 80px;
-    margin-top: -40px;
+    
     border:none;
     border-radius:30px;
     box-shadow:10px 30px 90px rgba(112,112,112,0.2);

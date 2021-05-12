@@ -75,7 +75,7 @@ function ConteudoEditarTelaPerfil() {
 
                     <S.TopSide >
 
-                        <a> Editar Perfil </a>
+                        <span> Editar Perfil </span>
                     </S.TopSide>
                     <S.Centro >
                         <S.Form1 >
