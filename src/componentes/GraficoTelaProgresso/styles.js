@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 
-width: 100%;//1920px;
-height: 905px;
-align-items:center;
+min-width: 900px;
+min-height: 365px;
+padding:40px;
 
-justify-content: space-around;
+justify-content: center;
 
 display:flex;
 

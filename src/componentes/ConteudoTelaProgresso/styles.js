@@ -90,7 +90,6 @@ export const LeftSideCentro = styled.div`
   min-height: 420px;
   display:flex;
   align-items: center;
-  //justify-content: center;
   flex-direction:column;
   #labels{
     width: 410px;
@@ -125,10 +124,10 @@ overflow-y: auto;
 export const RightSideCentro = styled.div`
 
 width: 800px;
-  height: 420px;
+  max-height: 420px;
   display:flex;
   align-items: center;
-  justify-content: center;
+ 
   flex-direction:column;
   
   #labels{
