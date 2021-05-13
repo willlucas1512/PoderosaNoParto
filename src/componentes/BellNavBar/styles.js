@@ -137,7 +137,7 @@ align-items:center;
 justify-content:center;
 font-size:25px;
 
-
+z-index: 1;
 
 `
 

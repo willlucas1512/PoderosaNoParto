@@ -86,11 +86,12 @@ width: 100%;
 `
 export const LeftSideCentro = styled.div`
 
-  max-width: 800px;
+min-width: 50%;
   min-height: 420px;
   display:flex;
   align-items: center;
   flex-direction:column;
+  margin-bottom:20px;
   #labels{
     width: 410px;
     margin:20px;
@@ -123,8 +124,8 @@ overflow-y: auto;
 `
 export const RightSideCentro = styled.div`
 
-width: 800px;
-  max-height: 420px;
+min-width: 50%;
+  min-height: 420px;
   display:flex;
   align-items: center;
  

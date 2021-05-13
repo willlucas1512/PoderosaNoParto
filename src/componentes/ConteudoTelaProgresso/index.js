@@ -3,6 +3,7 @@ import * as S from './styles.js'
 import FilterCardProgresso from '../FilterCardProgresso'
 import CartoesExerciciosProgresso from '../CartoesExerciciosProgresso'
 import GraficoTelaProgresso from '../GraficoTelaProgresso'
+import DonnutTelaProgresso from '../DonnutTelaProgresso'
 import iconeRespiracao from '../../assets/iconePretoRespiracao.png'
 import api from '../../services/api';
 import StoreContext from './../Store/Context';
@@ -121,7 +122,7 @@ function ConteudoTelaProgresso() {
                             < h1 > Estatísticas </h1>
 
                         </div>
-                            <GraficoTelaProgresso
+                            <DonnutTelaProgresso
                                 graficoRespiracaoSuperficial={graficoRespiracaoSuperficial}
                                 graficoRespiracaoProfunda={graficoRespiracaoProfunda}
                                 graficoRelaxamento={graficoRelaxamento}
