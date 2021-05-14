@@ -49,7 +49,7 @@ function SongNavBar() {
                                 <label className="inputLogin" >Música de fundo</label>
 
 
-                                <audio autoplay="true" volume={"0.2"} id="myaudio" autoPlay loop controls="controls">
+                                <audio volume={"0.2"} id="myaudio" controls="controls">
 
                                     <source src={Audio} type="audio/mp3" />
 
