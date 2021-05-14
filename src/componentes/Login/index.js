@@ -107,7 +107,7 @@ function Login() {
             <S.Container>
                 <div id="senhas">
 
-                    <input name="cpf" className="inputLogin" onChange={onChangeCpf} value={cpfLogin} placeholder="Digite seu CPF (Somente Números)"></input>
+                    <input name="cpf" className="inputLogin" onChange={onChangeCpf} value={cpfLogin} placeholder="Digite seu CPF"></input>
                 </div>
                 <div id="senhas">
 
