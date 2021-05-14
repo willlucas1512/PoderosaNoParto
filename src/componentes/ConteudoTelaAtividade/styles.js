@@ -41,7 +41,7 @@ export const LeftSide = styled.div`
     margin-bottom:10px;
     font-weight: bold;
     text-shadow: 0.1em 0.1em 0.2em rgba(112,112,112,0.5);
-    color:#A54786;
+    color:#B24C4E;
         
 
   }
@@ -56,6 +56,8 @@ width: 900px;
     justify-content: center;
     display:flex;
     flex-direction:column;
+
+    
   #respiracaoSuperficial{
   display:${props => props.respiracaoSuperficialDoDia ? "none" : "hide"};
 
@@ -81,7 +83,7 @@ width: 900px;
     margin-bottom:90px;
     font-weight: bold;
     text-shadow: 0.1em 0.1em 0.2em rgba(112,112,112,0.5);
-    color:#6D3E5D;
+    color:#B24C4E;
 
 
 
@@ -142,6 +144,7 @@ width: 900px;
     display:flex;
     align-items:flex-end;
     justify-content:flex-end;
+    margin-left:20px;
     height: 70px;
     width:460px;
     color: #FFF;

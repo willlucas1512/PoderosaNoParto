@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
    
    max-width:100%;
-  min-height:860px;
+  min-height:857px;
   
   padding:20px;
    display:flex;
@@ -15,9 +15,10 @@ export const Container = styled.div`
 `
 export const NovaSenha = styled.div`
    
-   max-width:1600px;
+   min-width: 1200px;
    min-height: 80%;
-  padding:50px;
+  //padding:50px;
+  
    display:flex;
    flex-direction:column;
    border-radius:15px;
@@ -63,7 +64,7 @@ width: 100%;
    display:flex;
  
  align-items:center;
-   justify-content: center;
+   //justify-content: center;
    flex-wrap:wrap;
 
    flex-direction:column;
@@ -72,13 +73,13 @@ width: 100%;
 
    .inputNovaSenha{
       
-      width: 95%;
-      height: 80px;
-      margin-top: 60px;
-     
+      width: 620px;
+      height: 75px;
+      margin-top: 50px;
+      //background: yellow;
       padding-left:10px;
       border:none;
-      border-radius:10px;
+      border-radius:15px;
       font-size:25px;
       box-shadow:10px 30px 90px rgba(112,112,112,0.2);
       color:rgb(112,112,112);
@@ -91,6 +92,7 @@ width: 100%;
 export const BottomSide = styled.div`
 width: 100%;
 min-height:100px;
+
 flex-direction:column;
 align-items:center;
 justify-content: center;
@@ -98,16 +100,18 @@ display:flex;
 
 .btnNovaSenha{
     
-   width: 40%;
-    height: 80px;
-    
-    border:none;
-    border-radius:30px;
-    box-shadow:10px 30px 90px rgba(112,112,112,0.2);
-    background:#B24C4E;
-    color: white;
-    font-size:30px;
-    cursor:pointer;
+
+    margin-bottom:80px;
+      width: 45%;
+      height: 80px;
+      border:none;
+      border-radius:40px;
+      box-shadow:10px 30px 90px rgba(112,112,112,0.2);
+      background:#6D3E5D;
+      color: white;
+      font-size:30px;
+      cursor:pointer;
+   
  };
  .btnNovaSenha:hover{
     

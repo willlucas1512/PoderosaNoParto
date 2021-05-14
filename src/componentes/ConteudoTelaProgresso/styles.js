@@ -101,7 +101,7 @@ min-width: 50%;
 justify-content: space-around;
 h1{
 
-color:black;
+  color:#B24C4E;
 }
 
 
@@ -141,7 +141,7 @@ min-width: 50%;
 justify-content: center;
 h1{
 
-  color:black;
+  color:#B24C4E;
 }
 
   }

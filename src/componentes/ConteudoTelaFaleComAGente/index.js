@@ -24,8 +24,7 @@ function ConteudoTelaFaleComAGente() {
 
                                     </p>
 
-
-                                <p>É possível entrar em contato com a coordenadora através do portal eletrômico do NEPAE {"&"} NESEN. Ao final da
+                                <p>É possível entrar em contato com a coordenadora através do portal eletrônico do NEPAE {"&"} NESEN. Ao final da
                                 <a className="a2" href="http://nepae.uff.br/"> página inicial</a> você encontrará um campo para enviar mensagens, dúvidas e sugestões. Não se esqueça de indicar o assunto.
                                  </p>
 

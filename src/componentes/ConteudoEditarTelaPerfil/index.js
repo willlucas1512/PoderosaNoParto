@@ -9,7 +9,6 @@ function ConteudoEditarTelaPerfil() {
     const initialUserState = {
         id: null,
         nome: "",
-        cpf: "",
         sexo: "",
         cep: "",
         email: "",
@@ -22,15 +21,28 @@ function ConteudoEditarTelaPerfil() {
     const { idUsuario } = useContext(StoreContext);
     const [dataNasc, setDataNasc] = useState(null);
     const [ultMest, setUltMest] = useState(null);
+    const [cpfEditarPerfil, setCpfEditarPerfil] = useState(null);
     const handleInputChange = event => {
         const { name, value } = event.target;
         setUser({ ...user, [name]: value });
     };
+    const handleInputChangeCpf = event => {
+        setCpfEditarPerfil(cpfMask(event.target.value))
+
+    }
+    const cpfMask = value => {
+        return value
+            .replace(/\D/g, '') // substitui qualquer caracter que nao seja numero por nada
+            .replace(/(\d{3})(\d)/, '$1.$2') // captura 2 grupos de numero o primeiro de 3 e o segundo de 1, apos capturar o primeiro grupo ele adiciona um ponto antes do segundo grupo de numero
+            .replace(/(\d{3})(\d)/, '$1.$2')
+            .replace(/(\d{3})(\d{1,2})/, '$1-$2')
+            .replace(/(-\d{2})\d+?$/, '$1') // captura 2 numeros seguidos de um traço e não deixa ser digitado mais nada
+    }
 
     const saveUser = async () => {
         var data = {
             nome: user.nome,
-            cpf: user.cpf,
+            cpf: cpfEditarPerfil,
             sexo: user.sexo,
             cep: user.cep,
             email: user.email,
@@ -88,12 +100,12 @@ function ConteudoEditarTelaPerfil() {
                                 name="nome" >
                             </input>
 
-                            < input type="number"
+                            < input
                                 className="inputEditarPerfil"
                                 placeholder="CPF"
                                 id="cpf"
-                                required value={user.cpf}
-                                onChange={handleInputChange}
+                                required value={cpfEditarPerfil}
+                                onChange={handleInputChangeCpf}
                                 name="cpf" >
 
                             </input>

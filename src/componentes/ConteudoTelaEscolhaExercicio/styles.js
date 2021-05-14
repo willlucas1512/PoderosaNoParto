@@ -25,23 +25,23 @@ box-shadow:10px 30px 90px rgba(112,112,112,0.7);
 color:rgb(112,112,112);
   
 
-a{
+span{
     
 
     
 
-color:#707070;
-//margin-left:-10px;
+    color:#B24C4E;
+
 width:570px;
 height: 80px;
 align-items:center;
 justify-content:space-around;
 
 border:solid rgba(112,112,112,0.2);
-border:none;
+font-weight: bold;
 display:flex;
 
-font-size:40px;
+font-size:60px;
 
 
 border: none;

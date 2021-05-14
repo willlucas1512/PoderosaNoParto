@@ -6,7 +6,7 @@ import * as IoIcons from 'react-icons/io5';
 
 import api from '../../services/api';
 function initialState() {
-    return { cpf: '', senha: '' }
+    return { senha: '' }
 }
 
 
@@ -17,6 +17,7 @@ function Login() {
     const { setIdUsuario } = useContext(StoreContext);
     const { setCpf } = useContext(StoreContext);
     const { setNomeUsuario } = useContext(StoreContext);
+    const [cpfLogin, setCpfLogin] = useState(null);
     const history = useHistory();
 
     //Função onChange atualizaos valores dos inputs 
@@ -28,6 +29,18 @@ function Login() {
             [name]: value
         });
     }
+    const onChangeCpf = event => {
+        setCpfLogin(cpfMask(event.target.value))
+
+    }
+    const cpfMask = value => {
+        return value
+            .replace(/\D/g, '') // substitui qualquer caracter que nao seja numero por nada
+            .replace(/(\d{3})(\d)/, '$1.$2') // captura 2 grupos de numero o primeiro de 3 e o segundo de 1, apos capturar o primeiro grupo ele adiciona um ponto antes do segundo grupo de numero
+            .replace(/(\d{3})(\d)/, '$1.$2')
+            .replace(/(\d{3})(\d{1,2})/, '$1-$2')
+            .replace(/(-\d{2})\d+?$/, '$1') // captura 2 numeros seguidos de um traço e não deixa ser digitado mais nada
+    }
 
     //Função onSubmit envia os valores dos inputs
     // para o banco de dados
@@ -35,14 +48,15 @@ function Login() {
 
         event.preventDefault();
 
-        if (!values.cpf)
+        if (!cpfLogin)
             return alert('Digite seu CPF')
 
 
         else if (!values.senha)
             return alert('Digite sua senha')
         else {
-            await api.post("/user/" + `${values.cpf}` + "/" + `${values.senha}`)
+            console.log(cpfLogin)
+            await api.post("/user/" + `${cpfLogin}` + "/" + `${values.senha}`)
 
                 .then((response) => {
 
@@ -93,7 +107,7 @@ function Login() {
             <S.Container>
                 <div id="senhas">
 
-                    <input name="cpf" className="inputLogin" onChange={onChange} value={values.cpf} placeholder="Digite seu CPF"></input>
+                    <input name="cpf" className="inputLogin" onChange={onChangeCpf} value={cpfLogin} placeholder="Digite seu CPF (Somente Números)"></input>
                 </div>
                 <div id="senhas">
 

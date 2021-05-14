@@ -91,13 +91,13 @@ class ConteudoTelasExercicios extends React.Component {
 
                         <label>
 
-                            <a>{this.props.exercicio}.   Vamos Praticar? </a>
+                            <p>{this.props.exercicio}.   Vamos Praticar? </p>
 
                             <span>{hours} : {minutes} : {seconds}</span>
 
                             <audio id="player" controls="controls">
 
-                                <source src={this.props.video} type="video/mp4" />
+                                <source src={this.props.audio} type="audio/mp3" />
 
                             </audio>
 

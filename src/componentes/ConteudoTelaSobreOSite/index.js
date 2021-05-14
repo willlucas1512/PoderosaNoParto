@@ -22,10 +22,11 @@ function ConteudoTelaSobreOSite() {
                     <S.Centro >
                         <h3>
                             <ul>
-                                <p>   <a className="a2"> Poderosa no Parto </a>
+                                <div className="PrimeiroParagrafo">
+                                    <p>   <a className="a2"> Poderosa no Parto </a>
                             é uma plataforma criada com o objetivo de empoderar a pessoa gestante para o enfrentamento do desconforto durante o trabalho de parto, trazendo informações importantes para ajudar a tomar decisões
                             seguras e saudáveis para o parto natural.</p>
-
+                                </div>
                                 <p>  <a className="a2"> Oferece as seguintes funções: </a> </p>
 
                                 <p>-Ensino sobre exercícios respiratórios e de relaxamento muscular; </p>

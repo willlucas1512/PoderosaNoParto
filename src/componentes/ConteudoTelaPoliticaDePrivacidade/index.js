@@ -7,7 +7,7 @@ function ConteudoTelaPoliticaDePrivacidade() {
         <div>
             <S.Container>
 
-                ConteudoTelaPoliticaDePrivacidade
+                <h1>Página em Construção</h1>
             </S.Container>
 
         </div>

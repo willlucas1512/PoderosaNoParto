@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
 width: 800px;
 height: 780px;
+
 padding:20px;
 display:flex;
 flex-direction:column;
@@ -15,8 +16,8 @@ box-shadow:2px 2px 10px #707070;
       display:flex;
       align-items:center;
       justify-content:center;
-    //  background:yellow;
-      width: 100%;
+    //background:yellow;
+      width: 90%;
       height: 130px;
       
       
@@ -40,7 +41,7 @@ margin-left:-65px;
   width: 100%;
   height: 80px;
   border:none;
-  border-radius:20px;
+  border-radius: 20px;
   font-size:25px;
   padding-left:10px;
   box-shadow:10px 30px 90px rgba(112,112,112,0.2);
@@ -57,7 +58,7 @@ margin-left:-65px;
     width: 679px;
     height: 100px;
     border:none;
-    border-radius:40px;
+    border-radius: 50px;
     box-shadow:10px 30px 90px rgba(112,112,112,0.2);
     background:#6D3E5D;
     font-size:30px;
@@ -69,7 +70,7 @@ margin-left:-65px;
     width: 508px;
     height: 94px;
     border:none;
-    border-radius:10px;
+    border-radius:15px;
     box-shadow:10px 30px 90px rgba(112,112,112,0.3);
     background: #B24C4E;
     color:white ;

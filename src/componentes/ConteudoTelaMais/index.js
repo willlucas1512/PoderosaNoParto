@@ -34,7 +34,7 @@ function ConteudoTelaMais() {
                 <S.RightSide>
                   
                   <S.TopRightSide>
-                  <a> Sumário: </a>
+                  <span> Sumário: </span>
 
                   </S.TopRightSide>
                   <S.Scroll >

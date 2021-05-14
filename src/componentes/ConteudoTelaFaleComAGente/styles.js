@@ -37,7 +37,7 @@ export const TopSide = styled.div`
   
 
    .a2{
-   
+      text-decoration:none; 
       width: 500px;
       height: 67px;
       font-size:60px;
@@ -61,8 +61,10 @@ width: 100%;
    position: relative;
    h3{
       width: 100%;
+      height:440px;
+      line-height:50px;
       
-      margin-bottom:10px;
+      
       font-size:30px;
       text-align:center;
      

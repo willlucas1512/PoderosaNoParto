@@ -24,8 +24,12 @@ export const CenterSide = styled.div`
     align-items:center;
     justify-content: center;
    
-
-    a{
+.audio {
+    text-decoration:none;
+    background:yellow;
+    width:100px;
+}
+    p{
     
      
         min-width: 380px;
@@ -33,7 +37,7 @@ export const CenterSide = styled.div`
         font-size:50px;
         font-weight: bold;
         text-shadow: 0.1em 0.1em 0.2em rgba(112,112,112,0.5);
-        color:#6D3E5D;
+        color:#B24C4E;
         display:flex;
         justify-content:center;
         margin-bottom:20px;

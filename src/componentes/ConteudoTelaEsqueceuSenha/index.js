@@ -6,35 +6,15 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
 
 function initialState() {
-    return { cpf: '', email: '' }
+    return { email: '' }
 }
 
-function TestaCPF(strCPF) {
-    var Soma
-    var Resto
-    var i
-    Soma = 0;
-    if (strCPF == "00000000000") return false;
-
-    for (i = 1; i <= 9; i++) Soma = Soma + parseInt(strCPF.substring(i - 1, i)) * (11 - i);
-    Resto = (Soma * 10) % 11;
-
-    if ((Resto == 10) || (Resto == 11)) Resto = 0;
-    if (Resto != parseInt(strCPF.substring(9, 10))) return false;
-
-    Soma = 0;
-    for (i = 1; i <= 10; i++) Soma = Soma + parseInt(strCPF.substring(i - 1, i)) * (12 - i);
-    Resto = (Soma * 10) % 11;
-
-    if ((Resto == 10) || (Resto == 11)) Resto = 0;
-    if (Resto != parseInt(strCPF.substring(10, 11))) return false;
-    return true;
-}
 
 function ConteudoTelaEsqueceuSenha() {
     const { setIdUsuarioReset } = useContext(StoreContext);
     const [values, setValues] = useState(initialState);
     const [dataNasc, setDataNasc] = useState(null);
+    const [cpfEsqueceuSenha, setCpfEsqueceuSenha] = useState(null);
     //Função onChange atualiza os valores dos inputs 
     function onChange(event) {
         const { value, name } = event.target;
@@ -44,17 +24,26 @@ function ConteudoTelaEsqueceuSenha() {
             [name]: value
         });
     }
+    const onChangeCpf = event => {
+        setCpfEsqueceuSenha(cpfMask(event.target.value))
+
+    }
+    const cpfMask = value => {
+        return value
+            .replace(/\D/g, '') // substitui qualquer caracter que nao seja numero por nada
+            .replace(/(\d{3})(\d)/, '$1.$2') // captura 2 grupos de numero o primeiro de 3 e o segundo de 1, apos capturar o primeiro grupo ele adiciona um ponto antes do segundo grupo de numero
+            .replace(/(\d{3})(\d)/, '$1.$2')
+            .replace(/(\d{3})(\d{1,2})/, '$1-$2')
+            .replace(/(-\d{2})\d+?$/, '$1') // captura 2 numeros seguidos de um traço e não deixa ser digitado mais nada
+    }
 
     //Função onSubmit envia os valores dos inputs
     // para o banco de dados
     async function onSubmit(event) {
 
         event.preventDefault();
-        if (!values.cpf)
+        if (!cpfEsqueceuSenha)
             return alert('cpf é obrigatório')
-
-        else if (TestaCPF(values.cpf) === false)
-            return alert('cpf é inválido')
 
         else if (!values.email)
             return alert('email é obrigatório')
@@ -62,7 +51,7 @@ function ConteudoTelaEsqueceuSenha() {
         else if (!dataNasc)
             return alert('Data de Nascimento é obrigatório')
         else {
-            await api.post("/user/" + `${values.cpf}` + "/" + `${values.email}` + "/" + `${dataNasc}`)
+            await api.post("/user/" + `${cpfEsqueceuSenha}` + "/" + `${values.email}` + "/" + `${dataNasc}`)
 
                 .then((response) => {
                     if (response.data.valor === true) {
@@ -95,7 +84,7 @@ function ConteudoTelaEsqueceuSenha() {
                     <S.Centro >
 
 
-                        <input name="cpf" type="number" className="inputNovaSenha" onChange={onChange} value={values.cpf} placeholder="CPF"></input>
+                        <input name="cpf" className="inputNovaSenha" onChange={onChangeCpf} value={cpfEsqueceuSenha} placeholder="CPF"></input>
                         <input name="email" type="text" className="inputNovaSenha" onChange={onChange} value={values.email} placeholder="E-mail"></input>
 
 

@@ -64,13 +64,15 @@ display:flex;
 position: relative;
 align-items:center;
 
-a{
+span{
  
     width:220px;
     height:60px;
-    color:#A54786;
+    color:#B24C4E;
     text-align:center;
-    font-size: 40px
+    font-size: 40px;
+  
+    font-weight: bold;
 }
 
 

@@ -39,14 +39,14 @@ export const TopSide = styled.div`
    justify-content: center;
 
    .a2{
-     
+      text-decoration:none; 
       width: 350px;
       height: 67px;
       font-size:60px;
       font-weight: bold;
       text-shadow: 0.1em 0.1em 0.2em rgba(112,112,112,0.5);//#707070 cinza
       color:#B24C4E;
-     // background:yellow;
+    
    }
 
 
@@ -68,15 +68,19 @@ width: 100%;
      
       display:flex;
   
-         a{
-          
+         .a2{
+            text-decoration:none; 
             font-size:35px;
             color:#B24C4E;
             text-shadow: 0.1em 0.1em 0.2em rgba(112,112,112,0.5);//#707070 cinza
             font-weight: bold;
          margin-left:5px;
          margin-right:5px;
-         
+         line-height:60px;
+         }
+         .PrimeiroParagrafo{
+            text-align: center;
+            width: 98%;
          }
          
 
@@ -85,23 +89,24 @@ width: 100%;
 
 export const BottomSide = styled.div`
    width: 100%;
-   min-height:180px;
+   min-height:150px;
    align-items:center;
    justify-content: center;
    display:flex;
- 
+
    h3{
      
       width: 100%;
-      margin-top:50px;
+      margin-top:20px;
       margin-bottom:50px;
       font-size:25px;
       align-items:center;
       justify-content: center;
       display:flex;
       text-align:center;
- 
-      a{
+      line-height:35px;
+      .a2{
+         
          text-decoration: none;
           font-size:25px;
           color:#3D80F3;
@@ -109,7 +114,7 @@ export const BottomSide = styled.div`
        margin-left:5px;
        margin-right:5px;
        }
-       a:hover{
+       .a2:hover{
          text-decoration: underline;
         
        }

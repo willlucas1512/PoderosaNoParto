@@ -25,9 +25,9 @@ export const LeftSide = styled.div`
     img{
 
 margin-left:10px;
-width:391px;
-height:489px;
-zoom: 1.6;
+width:625px;
+height:782px;
+
 }
 
 

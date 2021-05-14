@@ -26,10 +26,12 @@ height:80px;
     
     }
     .navegacoes{
+        margin-top:20px;
         display:flex;
         width:82%;
-    
-        align-items:center;
+        height:60px;
+
+       align-items:center;
         justify-content: center;
     }
 

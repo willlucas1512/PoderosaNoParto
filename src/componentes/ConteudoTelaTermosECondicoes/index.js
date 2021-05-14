@@ -6,8 +6,7 @@ function ConteudoTelaTermosECondicoes() {
     return (
         <div>
             <S.Container>
-
-                ConteudoTelaTermosECondicoes
+                <h1>Página em Construção</h1>
             </S.Container>
 
         </div>

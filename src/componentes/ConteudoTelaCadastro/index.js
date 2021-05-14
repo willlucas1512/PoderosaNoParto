@@ -3,6 +3,7 @@ import * as S from './styles.js'
 import api from '../../services/api';
 import * as IoIcons from 'react-icons/io5';
 
+import Cep from "react-simple-cep-mask";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
 function ConteudoTelaCadastro() {
@@ -10,7 +11,6 @@ function ConteudoTelaCadastro() {
     const initialUserState = {
         id: null,
         nome: "",
-        cpf: "",
         senha: "",
         sexo: "",
         cep: "",
@@ -21,10 +21,26 @@ function ConteudoTelaCadastro() {
     const [user, setUser] = useState(initialUserState);
     const [dataNasc, setDataNasc] = useState(null);
     const [ultMest, setUltMest] = useState(null);
+    const [cpfCadastro, setCpfCadastro] = useState(null);
+    const [cep, setCep] = useState("");
     const handleInputChange = event => {
         const { name, value } = event.target;
         setUser({ ...user, [name]: value });
     };
+    const handlechangeCpf = event => {
+        setCpfCadastro(cpfMask(event.target.value))
+
+    }
+
+    const cpfMask = value => {
+        return value
+            .replace(/\D/g, '') // substitui qualquer caracter que nao seja numero por nada
+            .replace(/(\d{3})(\d)/, '$1.$2') // captura 2 grupos de numero o primeiro de 3 e o segundo de 1, apos capturar o primeiro grupo ele adiciona um ponto antes do segundo grupo de numero
+            .replace(/(\d{3})(\d)/, '$1.$2')
+            .replace(/(\d{3})(\d{1,2})/, '$1-$2')
+            .replace(/(-\d{2})\d+?$/, '$1') // captura 2 numeros seguidos de um traço e não deixa ser digitado mais nada
+    }
+
 
 
 
@@ -35,10 +51,10 @@ function ConteudoTelaCadastro() {
 
         var data = {
             nome: user.nome,
-            cpf: user.cpf,
+            cpf: cpfCadastro,
             senha: user.senha,
             sexo: user.sexo,
-            cep: user.cep,
+            cep: cep,
             email: user.email,
             raca: user.raca,
             dataNasc: dataNasc,
@@ -92,10 +108,10 @@ function ConteudoTelaCadastro() {
 
         if (mostrarSenha === "text")
 
-            return <IoIcons.IoEyeSharp size="30" />
+            return <IoIcons.IoEyeSharp color="#707070 " size="30" />
         else
 
-            return <IoIcons.IoEyeOff size="30" />
+            return <IoIcons.IoEyeOff color="#707070" size="30" />
 
 
 
@@ -115,10 +131,10 @@ function ConteudoTelaCadastro() {
 
         if (mostrarConfirmarSenha === "text")
 
-            return <IoIcons.IoEyeSharp size="30" />
+            return <IoIcons.IoEyeSharp color="#707070" size="30" />
         else
 
-            return <IoIcons.IoEyeOff size="30" />
+            return <IoIcons.IoEyeOff color="#707070" size="30" />
 
 
 
@@ -145,12 +161,12 @@ function ConteudoTelaCadastro() {
                                 name="nome" >
                             </input>
 
-                            < input type="number"
+                            < input
                                 className="inputCadastro"
                                 placeholder="CPF"
                                 id="cpf"
-                                required value={user.cpf}
-                                onChange={handleInputChange}
+                                required value={cpfCadastro}
+                                onChange={handlechangeCpf}
                                 name="cpf" >
 
                             </input>
@@ -206,15 +222,12 @@ function ConteudoTelaCadastro() {
                         </S.Form1>
 
                         <S.Form2 >
-                            <input type="text"
+                            <Cep
                                 className="inputCadastro"
-                                placeholder="CEP(apenas números)"
-                                id="cep"
-                                required value={user.cep}
-                                onChange={handleInputChange}
-                                name="cep" >
-
-                            </input>
+                                value={cep}
+                                placeholder="Cep"
+                                onChange={(cep) => setCep(cep)}
+                            />
 
                             < input type="text"
                                 className="inputCadastro"
@@ -263,7 +276,7 @@ function ConteudoTelaCadastro() {
                                 onChange={date => setUltMest(date)}
                                 className="inputCadastro"
                                 disabled={false}
-                                placeholderText="Data da Ultima Mestruação"
+                                placeholderText="Data da Última Mestruação (Início)"
                                 peekNextMonth
                                 showMonthDropdown
                                 showYearDropdown

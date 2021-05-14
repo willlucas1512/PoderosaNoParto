@@ -161,13 +161,12 @@ function ConteudoTelaAtividade(props) {
                 >
 
                     <label>Atividades do dia {dia + "/" + mes + "/" + ano}</label>
+
                     <div id="respiracaoSuperficial" >
                         <button type="button" onClick={() => { window.location.replace("TelaRespiracaoSuperficial") }}   >
                             <BotoesExercicios exercicio={"Respiração Superficial"} />
                         </button>
                     </div>
-
-
                     <div id="respiracaoProfunda" >
                         <button type="button" onClick={() => { window.location.replace("TelaRespiracaoProfunda") }}>
                             <BotoesExercicios exercicio={"Respiração Profunda"} />

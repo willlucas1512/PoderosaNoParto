@@ -1,9 +1,9 @@
 import React from 'react';
 import * as S from './styles.js'
-import Video from './../../movies/videoRelaxamento.mp4'
+import Audio from './../../audios/audioRelaxamento.mp3'
 
 //nossos componentes
-import Header from '../../componentes/Header/HeaderTelasMenu'
+import Header from '../../componentes/Header/HeaderTelasExercicios'
 import Footer from '../../componentes/Footer'
 import ConteudoTelasExercicios from '../../componentes/ConteudoTelasExercicios'
 
@@ -13,7 +13,7 @@ function TelaRelaxamento() {
         <S.Container >
 
             <Header />
-            <ConteudoTelasExercicios exercicio="Relaxamento" video={Video} />
+            <ConteudoTelasExercicios exercicio="Relaxamento" audio={Audio} />
             <Footer />
         </S.Container>
 

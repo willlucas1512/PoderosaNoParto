@@ -9,7 +9,7 @@ function ConteudoTelaEscolhaExercicio() {
             <S.Container >
 
                 <S.Escolha >
-                    <a>Escolha o Exercicio</a>
+                    <span>Escolha o Exercício</span>
                     <button type="button" onClick={() => { window.location.replace("TelaRespiracaoSuperficial") }}>Respiração Superficial</button>
                     <button type="button" onClick={() => { window.location.replace("TelaRespiracaoProfunda") }}>Respiração Profunda</button>
                     <button type="button" onClick={() => { window.location.replace("TelaRelaxamento") }}>Relaxamento</button>
