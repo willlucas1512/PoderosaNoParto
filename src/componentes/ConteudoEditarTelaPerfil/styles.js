@@ -3,12 +3,11 @@ import styled from 'styled-components';
 export const Container = styled.div`
    
    max-width:100%;
-  min-height:800px;
-  
-  padding:20px;
+   min-height:800px;
+   padding:20px;
    display:flex;
    align-items:center;
-    justify-content:center;
+   justify-content:center;
 
    
 
@@ -17,7 +16,6 @@ export const EditarPerfil = styled.div`
    
    max-width:1600px;
    min-height: 80%;
-  
    display:flex;
    flex-direction:column;
    border-radius:15px;
@@ -33,8 +31,6 @@ export const TopSide = styled.div`
    align-items:center;
 
    span{
-    
-    
       width: 360px;
       height: 50px;
       font-size:60px;
@@ -42,18 +38,18 @@ export const TopSide = styled.div`
       text-shadow: 0.1em 0.1em 0.2em rgba(112,112,112,0.5);//#707070 cinza
       color:#A54786;
       display:flex;
-   justify-content: center;
-  align-items:center;
+      justify-content: center;
+      align-items:center;
    }
 
 `
 export const Centro = styled.div`
    
    width: 100%;
-  min-height: 459px;
+   min-height: 459px;
    display:flex;
- margin:50px;
- align-items:center;
+   margin:50px;
+   align-items:center;
    justify-content: center;
    flex-wrap:wrap;
 
@@ -61,7 +57,6 @@ export const Centro = styled.div`
 export const Form1 = styled.div`
    width: 690px;
    height: 439px;
-  
    justify-content: space-around;
    display:flex;
    flex-direction:column;
@@ -69,55 +64,50 @@ export const Form1 = styled.div`
    .inputEditarPerfil{
    
       width: 650px;
-  height: 50px;
-  display:flex;
-  align-items:center;
-  margin-top: 20px;
-  margin-left:20px;
-  border:none;
-  border-radius:10px;
-  font-size:25px;
-  padding-left:10px;
-  box-shadow:10px 30px 90px rgba(112,112,112,0.2);
-  color:rgb(112,112,112);
+      height: 50px;
+      display:flex;
+      align-items:center;
+      margin-top: 20px;
+      margin-left:20px;
+      border:none;
+      border-radius:10px;
+      font-size:25px;
+      padding-left:10px;
+      box-shadow:10px 30px 90px rgba(112,112,112,0.2);
+      color:rgb(112,112,112);
    };
-
-  
-   
-
 
 `
 export const Form2 = styled.div`
   
-  width: 690px;
+   width: 690px;
    height: 439px;
-  
    justify-content: space-around;
    display:flex;
    flex-direction:column;
 
-.inputEditarPerfil{
-  
-   width: 650px;
-  height: 50px;
-  display:flex;
-  align-items:center;
-  margin-top: 20px;
-  margin-left:20px;
-  border:none;
-  border-radius:10px;
-  font-size:25px;
-  padding-left:10px;
-  box-shadow:10px 30px 90px rgba(112,112,112,0.2);
-  color:rgb(112,112,112);
+   .inputEditarPerfil{
+   
+      width: 650px;
+      height: 50px;
+      display:flex;
+      align-items:center;
+      margin-top: 20px;
+      margin-left:20px;
+      border:none;
+      border-radius:10px;
+      font-size:25px;
+      padding-left:10px;
+      box-shadow:10px 30px 90px rgba(112,112,112,0.2);
+      color:rgb(112,112,112);
 
- };
+   };
 
 `
 export const BottomSide = styled.div`
 
-width: 100%;
-  min-height:180px;
+   width: 100%;
+   min-height:180px;
    flex-direction:column;
    align-items:center;
    justify-content: center;
@@ -135,8 +125,6 @@ width: 100%;
       font-size:25px;
       cursor:pointer;
    };
-
-
 
 `
 

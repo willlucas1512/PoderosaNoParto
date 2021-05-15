@@ -5,15 +5,17 @@ import * as BsIcons from 'react-icons/bs';
 import * as GiIcons from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 import { IconContext } from 'react-icons';
-import * as S from './styles.js'
-import StoreContext from './../Store/Context'
+import * as S from './styles.js';
+import StoreContext from './../Store/Context';
 
 function BellNavBar(props) {
+
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
     const { respiracaoSuperficialDoDia } = useContext(StoreContext);
     const { respiracaoProfundaDoDia } = useContext(StoreContext);
     const { relaxamentoDoDia } = useContext(StoreContext);
+
     return (
 
         <S.Container
@@ -32,35 +34,42 @@ function BellNavBar(props) {
                         <BsIcons.BsFillBellFill size={50} onClick={showSidebar} />
                     </Link>
                 </div>
+
                 <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-                    <ul className='nav-menu-items' onClick={showSidebar}>
-                        <li className='navbar-toggle'>
-                            <Link to='#' className='menu-bars'>
-                                <AiIcons.AiOutlineClose />
-                            </Link>
-                        </li>
+                    <ul>
+                        <ul className='nav-menu-items' onClick={showSidebar}>
+                            <li className='navbar-toggle'>
+                                <Link to='#' className='menu-bars'>
+                                    <AiIcons.AiOutlineClose />
+                                </Link>
+                            </li>
+                        </ul>
 
-                        <li className='nav-text'>
+                        <ul>
 
-                            <Link id='respiracaoSuperficial' to={'/TelaRespiracaoSuperficial'}>
-                                <a><GiIcons.GiAwareness /></a>
-                                <span>{'Respiração Superficial'}</span>
 
-                            </Link>
+                            <li className='nav-text'>
 
-                            <Link id='respiracaoProfunda' to={'/TelaRespiracaoProfunda'}>
-                                <a><GiIcons.GiAwareness /></a>
-                                <span>{'Respiração Profunda'}</span>
+                                <Link id='respiracaoSuperficial' to={'/TelaRespiracaoSuperficial'}>
+                                    <a><GiIcons.GiAwareness /></a>
+                                    <span>{'Respiração Superficial'}</span>
 
-                            </Link>
-                            <Link id='relaxamento' to={'/TelaRelaxamento'}>
-                                <a><MdIcons.MdAirlineSeatReclineExtra /></a>
-                                <span>{'Relaxamento'}</span>
+                                </Link>
 
-                            </Link>
+                                <Link id='respiracaoProfunda' to={'/TelaRespiracaoProfunda'}>
+                                    <a><GiIcons.GiAwareness /></a>
+                                    <span>{'Respiração Profunda'}</span>
 
-                        </li>
+                                </Link>
+                                <Link id='relaxamento' to={'/TelaRelaxamento'}>
+                                    <a><MdIcons.MdAirlineSeatReclineExtra /></a>
+                                    <span>{'Relaxamento'}</span>
 
+                                </Link>
+
+                            </li>
+
+                        </ul>
                     </ul>
                 </nav>
             </IconContext.Provider>

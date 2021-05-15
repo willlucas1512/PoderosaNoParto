@@ -1,25 +1,24 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    max-width:100%;
-   min-height:870px;
-    
-    position: relative;
-    align-items:center;
-    justify-content: space-around;
-    display:flex;
-    flex-wrap: wrap;
+  max-width:100%;
+  min-height:870px;
+  position: relative;
+  align-items:center;
+  justify-content: space-around;
+  display:flex;
+  flex-wrap: wrap;
 
 
 
 `
 export const LeftSide = styled.div`
-   width: 900px;
-    height:850px;
-    display:flex;
-    align-items:center;
-    justify-content: center;
-    flex-direction:column;
+  width: 900px;
+  height:850px;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction:column;
 
   img{
     width: 831px;
@@ -42,7 +41,6 @@ export const LeftSide = styled.div`
     font-weight: bold;
     text-shadow: 0.1em 0.1em 0.2em rgba(112,112,112,0.5);
     color:#B24C4E;
-        
 
   }
 
@@ -50,12 +48,12 @@ export const LeftSide = styled.div`
 `
 export const RigthSide = styled.div`
 
-width: 900px;
-    height:850px;
-    align-items:center;
-    justify-content: center;
-    display:flex;
-    flex-direction:column;
+  width: 900px;
+  height:850px;
+  align-items:center;
+  justify-content: center;
+  display:flex;
+  flex-direction:column;
 
     
   #respiracaoSuperficial{
@@ -76,7 +74,6 @@ width: 900px;
     width:80%;
     height: 67px;
     display:flex;
-   
     justify-content: center;
     font-size:45px;
     margin-top:-90px;
@@ -84,14 +81,8 @@ width: 900px;
     font-weight: bold;
     text-shadow: 0.1em 0.1em 0.2em rgba(112,112,112,0.5);
     color:#B24C4E;
-
-
-
-  
     align-items:center;
-   
-  
-
+     
   }
   button{
 
@@ -102,27 +93,22 @@ width: 900px;
   border: none;
   cursor:pointer;
 
-
   }
 
   .btnAdicionarAtividade{
-      
-
-  width:600px;
-  height: 100px;
-  border-radius:30px;
-  margin-bottom:20px;
-  border: none;
-  cursor:pointer;
-  background:#6D3E5D;
-  border:solid rgba(112,112,112,0.2);
-  display:flex;
-
- 
-
-
+    
+    width:600px;
+    height: 100px;
+    border-radius:30px;
+    margin-bottom:20px;
+    border: none;
+    cursor:pointer;
+    background:#6D3E5D;
+    border:solid rgba(112,112,112,0.2);
+    display:flex;
 
   }
+
   .btnAdicionarAtividade:hover{
     
     background:#C79518;

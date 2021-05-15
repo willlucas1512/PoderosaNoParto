@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from 'react';
 import * as S from './styles.js'
 import FilterCardProgresso from '../FilterCardProgresso'
 import CartoesExerciciosProgresso from '../CartoesExerciciosProgresso'
-import GraficoTelaProgresso from '../GraficoTelaProgresso'
 import DonnutTelaProgresso from '../DonnutTelaProgresso'
 import iconeRespiracao from '../../assets/iconePretoRespiracao.png'
 import api from '../../services/api';

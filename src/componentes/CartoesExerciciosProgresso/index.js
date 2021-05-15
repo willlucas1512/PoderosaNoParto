@@ -1,17 +1,20 @@
-import React, { useMemo } from 'react';
-import { format } from 'date-fns';
+import React from 'react';
 import * as S from './styles.js'
 import * as GiIcons from 'react-icons/gi';
 import * as MdIcons from "react-icons/md";
 
 function CartoesExerciciosProgresso({ titulo, duracao, finalizada }) {
+
     function converterData(dataDoBanco) {
+
         const dataNascPrimeiroDivisao = dataDoBanco.split("T")
         const dataNascSegundaDivisao = dataNascPrimeiroDivisao[0].split("-")
         const dataNascFinal = (dataNascSegundaDivisao[2] + "/" + dataNascSegundaDivisao[1] + "/" + dataNascSegundaDivisao[0])
         return dataNascFinal
-    }
-    const date = converterData(finalizada)
+
+    };
+
+    const date = converterData(finalizada);
 
     function iconeExercicio() {
 
@@ -21,7 +24,7 @@ function CartoesExerciciosProgresso({ titulo, duracao, finalizada }) {
         else
 
             return <GiIcons.GiAwareness size="50" alt="Icone da Tarefa" />
-    }
+    };
 
     return (
 

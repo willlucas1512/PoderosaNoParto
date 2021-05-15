@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import * as S from './styles.js'
 import api from '../../services/api';
 import * as IoIcons from 'react-icons/io5';
-
 import Cep from "react-simple-cep-mask";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
@@ -12,6 +11,7 @@ function ConteudoTelaCadastro() {
         id: null,
         nome: "",
         senha: "",
+        confirmarSenha: "",
         sexo: "",
         cep: "",
         email: "",
@@ -23,14 +23,16 @@ function ConteudoTelaCadastro() {
     const [ultMest, setUltMest] = useState(null);
     const [cpfCadastro, setCpfCadastro] = useState(null);
     const [cep, setCep] = useState("");
+
     const handleInputChange = event => {
         const { name, value } = event.target;
         setUser({ ...user, [name]: value });
     };
-    const handlechangeCpf = event => {
-        setCpfCadastro(cpfMask(event.target.value))
 
-    }
+    const handlechangeCpf = event => {
+        setCpfCadastro(cpfMask(event.target.value));
+
+    };
 
     const cpfMask = value => {
         return value
@@ -45,9 +47,9 @@ function ConteudoTelaCadastro() {
 
 
     const saveUser = async () => {
-
-
-
+        if (user.senha !== user.confirmarSenha) {
+            return alert("Senhas não conferem")
+        }
 
         var data = {
             nome: user.nome,
@@ -60,8 +62,8 @@ function ConteudoTelaCadastro() {
             dataNasc: dataNasc,
             ultMest: ultMest
 
-        }
-        console.log(data)
+        };
+
 
         await api.post("/user/", data)
 
@@ -98,11 +100,11 @@ function ConteudoTelaCadastro() {
 
         if (mostrarSenha == "text") {
 
-            setMostrarSenha("password")
+            setMostrarSenha("password");
         } else {
-            setMostrarSenha("text")
+            setMostrarSenha("text");
         }
-    }
+    };
 
     function iconeSenha() {
 
@@ -115,7 +117,7 @@ function ConteudoTelaCadastro() {
 
 
 
-    }
+    };
 
     function mostrarOConfirmarSenha() {
 
@@ -125,7 +127,7 @@ function ConteudoTelaCadastro() {
         } else {
             setMostrarConfirmarSenha("text")
         }
-    }
+    };
 
     function iconeConfirmarSenha() {
 
@@ -138,7 +140,7 @@ function ConteudoTelaCadastro() {
 
 
 
-    }
+    };
 
     return (
         < div >
@@ -242,7 +244,13 @@ function ConteudoTelaCadastro() {
                             <div id="senhas">
                                 <input type={mostrarConfirmarSenha}
                                     className="inputCadastro"
-                                    placeholder="Confirmar Senha" >
+                                    placeholder="Confirmar Senha"
+                                    id="confirmarSenha"
+                                    required value={user.confirmarSenha}
+                                    onChange={handleInputChange}
+                                    name="confirmarSenha"
+                                >
+
 
                                 </input>
                                 <button onClick={mostrarOConfirmarSenha}>

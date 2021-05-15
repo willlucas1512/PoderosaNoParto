@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import * as S from './styles.js'
 import StoreContext from './../Store/Context';
 import api from '../../services/api';
-
+import AudioPlayer1 from "../AudioPlayer1"
 class ConteudoTelasExercicios extends React.Component {
 
     static contextType = StoreContext
@@ -87,34 +87,38 @@ class ConteudoTelasExercicios extends React.Component {
                 <S.Container >
 
                     <S.CenterSide >
+                        <di>
 
-
+                        </di>
                         <label>
 
                             <p>{this.props.exercicio}.   Vamos Praticar? </p>
 
                             <span>{hours} : {minutes} : {seconds}</span>
 
-                            <audio id="player" controls="controls">
 
-                                <source src={this.props.audio} type="audio/mp3" />
+                            <AudioPlayer1
+                                audio={this.props.audio}
+                                autoplay={false}
+                                idPlayer={"player"}
+                                volumeAudio={1}
+                            />
 
-                            </audio>
 
                         </label>
 
 
                         {this.state.timerOn === false && this.state.timerTime === 0 && (
-                            <button type="button" onClick={this.startTimer}>Iniciar</button>
+                            <button className={"buttonExercicios"} type="button" onClick={this.startTimer}>Iniciar</button>
                         )}
                         {this.state.timerOn === true && (
-                            <button type="button" onClick={this.stopTimer}>Parar</button>
+                            <button className={"buttonExercicios"} type="button" onClick={this.stopTimer}>Parar</button>
                         )}
                         {this.state.timerOn === false && this.state.timerTime > 0 && (
-                            <button type="button" onClick={this.startTimer}>Retornar</button>
+                            <button className={"buttonExercicios"} type="button" onClick={this.startTimer}>Retornar</button>
                         )}
                         {
-                            <button type="button" onClick={() => { this.concluirExercicicio(this.props.exercicio, duracao) }}>Concluir</button>
+                            <button className={"buttonExercicios"} type="button" onClick={() => { this.concluirExercicicio(this.props.exercicio, duracao) }}>Concluir</button>
                         }
 
 

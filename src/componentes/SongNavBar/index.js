@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 import * as S from './styles.js'
 import Audio from './../../audios/Música Relaxante.mp3'
-import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
+import AudioPlayer1 from "../AudioPlayer1"
+
 
 
 function SongNavBar() {
@@ -49,11 +49,12 @@ function SongNavBar() {
                                 <label className="inputLogin" >Música de fundo</label>
 
 
-                                <audio volume={"0.2"} id="myaudio" controls="controls">
-
-                                    <source src={Audio} type="audio/mp3" />
-
-                                </audio>
+                                <AudioPlayer1
+                                    audio={Audio}
+                                    autoplay={true}
+                                    idPlayer={"myaudio"}
+                                    volumeAudio={0.3}
+                                />
                             </li>
                         </ul>
                     </div>

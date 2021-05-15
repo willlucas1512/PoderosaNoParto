@@ -3,7 +3,8 @@ import * as S from './styles.js'
 import api from '../../services/api';
 import StoreContext from './../Store/Context';
 import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css'
+import 'react-datepicker/dist/react-datepicker.css';
+
 function ConteudoEditarTelaPerfil() {
 
     const initialUserState = {
@@ -13,7 +14,6 @@ function ConteudoEditarTelaPerfil() {
         cep: "",
         email: "",
         raca: "",
-
         modificed: Date.now()
     };
 
@@ -22,14 +22,17 @@ function ConteudoEditarTelaPerfil() {
     const [dataNasc, setDataNasc] = useState(null);
     const [ultMest, setUltMest] = useState(null);
     const [cpfEditarPerfil, setCpfEditarPerfil] = useState(null);
+
     const handleInputChange = event => {
         const { name, value } = event.target;
         setUser({ ...user, [name]: value });
     };
+
     const handleInputChangeCpf = event => {
         setCpfEditarPerfil(cpfMask(event.target.value))
 
-    }
+    };
+
     const cpfMask = value => {
         return value
             .replace(/\D/g, '') // substitui qualquer caracter que nao seja numero por nada
@@ -37,7 +40,7 @@ function ConteudoEditarTelaPerfil() {
             .replace(/(\d{3})(\d)/, '$1.$2')
             .replace(/(\d{3})(\d{1,2})/, '$1-$2')
             .replace(/(-\d{2})\d+?$/, '$1') // captura 2 numeros seguidos de um traço e não deixa ser digitado mais nada
-    }
+    };
 
     const saveUser = async () => {
         var data = {

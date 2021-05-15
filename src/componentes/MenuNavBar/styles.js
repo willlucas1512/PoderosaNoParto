@@ -12,6 +12,7 @@ margin-left:3%;
     display: flex;
     justify-content: start;
     align-items: center;
+    
 }
 
 .menu-bars {
@@ -34,7 +35,9 @@ margin-left:3%;
     top: 0;
     right: -100%;
     transition: 850ms;
-
+   // background:red;
+    box-shadow:2px 2px 10px #707070;
+    border-style: inset;
 }
 
 .nav-menu.active {
@@ -70,11 +73,10 @@ flex-direction:column;
 
 
 .nav-menu-items {//conteiner com toda tab
-margin-top:-10px;    
-width: 100%;
-padding-bottom:30px;
 
-box-shadow:2px 2px 10px #707070;
+width: 100%;
+padding-bottom:20px;
+
 }
 
 

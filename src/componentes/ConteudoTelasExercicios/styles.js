@@ -73,7 +73,7 @@ export const CenterSide = styled.div`
         margin-bottom:80px;
 
     }
-    button{
+    .buttonExercicios {
 
         width: 550px;
         height: 100px;
@@ -86,7 +86,7 @@ export const CenterSide = styled.div`
         font-size:30px;
         cursor:pointer;
     };
-    button:hover{
+    .buttonExercicios:hover{
        
         background:#C79518;
     };

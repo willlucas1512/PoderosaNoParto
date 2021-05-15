@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import * as S from './styles.js'
-import ProgressoFraco from '../../assets/iconeProgressofraco.png'
-import ProgressoBom from '../../assets/iconeProgressoBom.png'
-import ProgressoRegular from '../../assets/iconeProgressoRegular.png'
-import ProgressoExcelente from '../../assets/iconeProgressoExcelente.png'
-import BotoesExercicios from './../BotoesExerciciosTelaAtividade'
+import * as S from './styles.js';
+import ProgressoFraco from '../../assets/iconeProgressofraco.png';
+import ProgressoBom from '../../assets/iconeProgressoBom.png';
+import ProgressoRegular from '../../assets/iconeProgressoRegular.png';
+import ProgressoExcelente from '../../assets/iconeProgressoExcelente.png';
+import BotoesExercicios from './../BotoesExerciciosTelaAtividade';
 import * as MdIcons from "react-icons/md";
 import StoreContext from './../Store/Context';
 
@@ -16,115 +16,116 @@ function ConteudoTelaAtividade(props) {
     const { respiracaoSuperficialDoDia } = useContext(StoreContext);
     const { respiracaoProfundaDoDia } = useContext(StoreContext);
     const { relaxamentoDoDia } = useContext(StoreContext);
-    const nomeArray = nomeUsuario.split(" ")
-    const nome = nomeArray[0]
+    const nomeArray = nomeUsuario.split(" ");
+    const nome = nomeArray[0];
 
     var data = new Date();
     var numerodia = data.getDate();
-    var dia
+    var dia;
     var numeromes = data.getMonth();
-    var mes
+    var mes;
     var ano = data.getFullYear();
 
     function numeroMes(numeromes) {
         if (numeromes === 0) {
-            var mes = "01"
+            var mes = "01";
             return mes
         }
         if (numeromes === 1) {
-            var mes = "02"
+            var mes = "02";
             return mes
         }
         if (numeromes === 2) {
-            var mes = "03"
+            var mes = "03";
             return mes
         }
         if (numeromes === 3) {
-            var mes = "04"
+            var mes = "04";
             return mes
         }
         if (numeromes === 4) {
-            var mes = "05"
+            var mes = "05";
             return mes
         }
         if (numeromes === 5) {
-            var mes = "06"
+            var mes = "06";
             return mes
         }
         if (numeromes === 6) {
-            var mes = "07"
+            var mes = "07";
             return mes
         }
         if (numeromes === 7) {
-            var mes = "08"
+            var mes = "08";
             return mes
         }
         if (numeromes === 8) {
-            var mes = "09"
+            var mes = "09";
             return mes
         }
         if (numeromes === 9) {
-            var mes = "10"
+            var mes = "10";
             return mes
         }
         if (numeromes === 10) {
-            var mes = "11"
+            var mes = "11";
             return mes
         }
         if (numeromes === 11) {
-            var mes = "12"
+            var mes = "12";
             return mes
         }
 
-    }
+    };
+
     function numeroDia(numerodia) {
 
         if (numerodia === 1) {
-            var dia = "01"
+            var dia = "01";
             return dia
         }
         else if (numerodia === 2) {
-            var dia = "02"
+            var dia = "02";
             return dia
         }
         else if (numerodia === 3) {
-            var dia = "03"
+            var dia = "03";
             return dia
         }
         else if (numerodia === 4) {
-            var dia = "04"
+            var dia = "04";
             return dia
         }
         else if (numerodia === 5) {
-            var dia = "05"
+            var dia = "05";
             return dia
         }
         else if (numerodia === 6) {
-            var dia = "06"
+            var dia = "06";
             return dia
         }
         else if (numerodia === 7) {
-            var dia = "07"
+            var dia = "07";
             return dia
         }
         else if (numerodia === 8) {
-            var dia = "08"
+            var dia = "08";
             return dia
         }
         else if (numerodia === 9) {
-            var dia = "09"
+            var dia = "09";
             return dia
         } else {
-            var dia = numerodia
+            var dia = numerodia;
             return dia
 
         }
 
 
-    }
+    };
 
-    mes = numeroMes(numeromes)
-    dia = numeroDia(numerodia)
+    mes = numeroMes(numeromes);
+    dia = numeroDia(numerodia);
 
     function image(tarefaPendentes) {
 
@@ -142,7 +143,7 @@ function ConteudoTelaAtividade(props) {
 
         }
 
-    }
+    };
 
     return (
         <div>

@@ -23,31 +23,39 @@ function Navbar() {
                     </Link>
                 </div>
                 <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-                    <ul className='nav-menu-items' onClick={showSidebar}>
-                        <li className='navbar-toggle'>
-                            <Link to='#' className='menu-bars'>
-                                <AiIcons.AiOutlineClose />
-                            </Link>
-                        </li>
-                        <li className='nav-text'>
+                    <ul>
 
 
-                            <Link to={'/TelaPerfil'} >
+                        <ul className='nav-menu-items' onClick={showSidebar}>
+                            <li className='navbar-toggle'>
+                                <Link to='#' className='menu-bars'>
+                                    <AiIcons.AiOutlineClose />
+                                </Link>
+                            </li>
 
-                                <a > <MdIcons.MdAccountCircle /></a>
-                                <span >{'Perfil'}</span>
-                            </Link>
+                        </ul>
+                        <ul>
+
+                            <li className='nav-text'>
 
 
-                            <Link to={'/'} onClick={() => setToken(null)} >
+                                <Link to={'/TelaPerfil'} >
 
-                                <a > <AiIcons.AiOutlineExport /></a>
-                                <span >{'Sair'}</span>
-                            </Link>
+                                    <a > <MdIcons.MdAccountCircle /></a>
+                                    <span >{'Perfil'}</span>
+                                </Link>
 
 
-                        </li>
+                                <Link to={'/'} onClick={() => setToken(null)} >
 
+                                    <a > <AiIcons.AiOutlineExport /></a>
+                                    <span >{'Sair'}</span>
+                                </Link>
+
+
+                            </li>
+
+                        </ul>
                     </ul>
                 </nav>
             </IconContext.Provider>

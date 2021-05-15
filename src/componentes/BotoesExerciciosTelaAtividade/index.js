@@ -6,6 +6,7 @@ import * as MdIcons from "react-icons/md";
 function BotoesExerciciosTelaAtividade(props) {
 
     function iconeExercicio() {
+
         if (props.exercicio == "Relaxamento")
             return <MdIcons.MdAirlineSeatReclineExtra color="white" size="50" alt="Icone da Tarefa" />
         else
