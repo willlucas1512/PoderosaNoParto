@@ -42,7 +42,7 @@ function ConteudoTelaSobreOSite() {
 
                         <h3>
                             <p> O conteúdo aprensentado faz parte do curso
-                                 <a className="a2" href="http://nepae.uff.br/2020/07/08/preparo-para-o-parto-e-aleitamento/">Preparo para o Parto e Aleitamento</a>,
+                                 <a className="a2" href="http://nepae.uff.br/2020/07/08/preparo-para-o-parto-e-aleitamento/" target="_blank">Preparo para o Parto e Aleitamento</a>,
                                 oferecido pelo NEPAE - Núcleo de Estudos e Pesquisas sobre as Atividades de Enfermagem e pelo NESEN
                                  - Núcleo  de Estudos sobre Saúde e Etnia Negra, da UFF - Universidade Federal Fluminense.
                                  O site é resultado de um esforço conjunto entre profissionais de saúde e TI,
