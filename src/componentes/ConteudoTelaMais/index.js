@@ -40,7 +40,7 @@ function ConteudoTelaMais() {
                   <S.Scroll >
                 <p>
                 <span><MdIcons.MdAddCircleOutline size={62} style={{ fill: '#A54786' }} /></span>
-                 <a href="http://nepae.uff.br/2020/07/08/1a-pratica-saudavel-de-parto/" target="_blank"> Primeira prática saudável de parto </a>
+                 <a href="http://nepae.uff.br/?p=1184" target="_blank"> Primeira prática saudável de parto </a>
                  </p>
 
                  <p>
