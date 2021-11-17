@@ -45,22 +45,22 @@ function ConteudoTelaMais() {
 
                  <p>
                 <span><MdIcons.MdAddCircleOutline size={62} style={{ fill: '#A54786' }} /></span>
-                <a href="http://nepae.uff.br/2020/07/09/2a-pratica-saudavel-de-parto/" target="_blank">  Segunda prática saudável de parto </a>
+                <a href="http://nepae.uff.br/?p=1224" target="_blank">  Segunda prática saudável de parto </a>
                  </p>
 
                  <p>
                 <span><MdIcons.MdAddCircleOutline size={62} style={{ fill: '#A54786' }} /></span>
-                <a href="http://nepae.uff.br/2020/07/09/3a-pratica-saudavel-do-parto/" target="_blank"> Terceira prática saudável de parto </a>
+                <a href="http://nepae.uff.br/?p=1232" target="_blank"> Terceira prática saudável de parto </a>
                  </p>
                  <p>
 
                 <span><MdIcons.MdAddCircleOutline size={62} style={{ fill: '#A54786' }} /></span>
-                <a href="http://nepae.uff.br/2020/07/10/4a-pratica-saudavel-de-parto/" target="_blank"> Quarta prática saudável de parto </a>
+                <a href="http://nepae.uff.br/?p=1286" target="_blank"> Quarta prática saudável de parto </a>
                  </p>
 
                  <p>
                 <span><MdIcons.MdAddCircleOutline size={62} style={{ fill: '#A54786' }} /></span>
-                <a href="http://nepae.uff.br/2020/07/10/5a-pratica-saudavel-de-parto/" target="_blank">  Quinta prática saudável de parto </a>
+                <a href="http://nepae.uff.br/?p=1310" target="_blank">  Quinta prática saudável de parto </a>
                  </p>
 
                  <p>
@@ -70,12 +70,12 @@ function ConteudoTelaMais() {
 
                  <p>
                 <span><MdIcons.MdAddCircleOutline size={62} style={{ fill: '#A54786' }} /></span>
-                <a href="http://nepae.uff.br/2020/07/10/procedimento-desnecessario-nao/" target="_blank">  Procedimento desnecessário? Não! </a>
+                <a href="http://nepae.uff.br/?p=1302" target="_blank">  Procedimento desnecessário? Não! </a>
                  </p>
 
                  <p>
                 <span><MdIcons.MdAddCircleOutline size={62} style={{ fill: '#A54786' }} /></span>
-                <a href="http://nepae.uff.br/2020/07/13/alojamento-conjunto/" target="_blank">  Alojamento Conjunto </a>
+                <a href="http://nepae.uff.br/?p=1353" target="_blank">  Alojamento Conjunto </a>
                  </p>
 
                  <p>
@@ -85,17 +85,17 @@ function ConteudoTelaMais() {
 
                  <p>
                 <span><MdIcons.MdAddCircleOutline size={62} style={{ fill: '#A54786' }} /></span>
-                <a href="http://nepae.uff.br/2020/07/21/aleitamento-exclusivo/" target="_blank"> Aleitamento exclusivo </a>
+                <a href="http://nepae.uff.br/?p=1407" target="_blank"> Aleitamento exclusivo </a>
                  </p>
 
                  <p>
                 <span><MdIcons.MdAddCircleOutline size={62} style={{ fill: '#A54786' }} /></span>
-                <a href="http://nepae.uff.br/2020/07/21/contracepcao-apos-o-parto/" target="_blank">  Contracepção após o parto </a>
+                <a href="http://nepae.uff.br/?p=1434" target="_blank">  Contracepção após o parto </a>
                  </p>
 
                  <p>
                 <span><MdIcons.MdAddCircleOutline size={62} style={{ fill: '#A54786' }} /></span>
-                <a href="http://nepae.uff.br/2020/07/21/meu-plano-de-parto/" target="_blank">  Plano de parto </a>
+                <a href="http://nepae.uff.br/?p=1453" target="_blank">  Plano de parto </a>
                  </p>
 
                  </S.Scroll >
