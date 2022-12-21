@@ -19,51 +19,56 @@ import TelaRelaxamento from './..//views/TelaRelaxamento'
 import TelaEsqueceuSenha from './..//views/TelaEsqueceuSenha'
 import TelaResetarSenha from './..//views/TelaResetarSenha'
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import StoreProvider from './../componentes/Store/Provider';
 import RoutesPrivate from './Private/Private'
 
 
-class Routes extends React.Component {
+class Rotas extends React.Component {
     render() {
 
-        return (<Router >
-            <div >
+        return (
                 <StoreProvider>
-                    <Switch >
+                <BrowserRouter>
+                    <Routes >
 
-                        <Route exact path="/" ><TelaHome /> </Route>
-                        <Route path="/TelaCadastro" > <TelaCadastro /> </Route>
-                        <Route path="/TelaPoliticaDePrivacidade" ><TelaPoliticaDePrivacidade /> </Route>
-                        <Route path="/TelaTermosECondicoes" ><TelaTermosECondicoes /> </Route>
-                        <Route path="/TelaFaleComAGente" ><TelaFaleComAGente /> </Route>
-                        <Route path="/TelaEsqueceuSenha" ><TelaEsqueceuSenha /> </Route>
-                        <Route path="/TelaSobreOSite" ><TelaSobreOSite /> </Route>
-                        <Route path="/TelaResetarSenha" ><TelaResetarSenha /> </Route>
-                        <RoutesPrivate path="/TelaPerfil" ><TelaPerfil /> </RoutesPrivate>
-                        <RoutesPrivate path="/TelaEditarPerfil" ><TelaEditarPerfil /> </RoutesPrivate>
+                        
+                        <Route exact path="/" element={<TelaHome/>} />
+                        <Route path="/TelaCadastro" element={<TelaCadastro />} />
+                        <Route path="/TelaPoliticaDePrivacidade" element={<TelaPoliticaDePrivacidade />} />
+                        <Route path="/TelaTermosECondicoes" element={<TelaTermosECondicoes />} />
+                        <Route path="/TelaFaleComAGente" element={<TelaFaleComAGente />} />
+                        <Route path="/TelaEsqueceuSenha" element={<TelaEsqueceuSenha />} />
+                        <Route path="/TelaSobreOSite" element={<TelaSobreOSite />} />
+                        <Route path="/TelaResetarSenha" element={<TelaResetarSenha />} />
+                        <Route path="/TelaPerfil" element={<RoutesPrivate><TelaPerfil /></RoutesPrivate>}/>
+                        <Route path="/TelaEditarPerfil" element={<RoutesPrivate><TelaEditarPerfil /></RoutesPrivate>}/>
+                        <Route path="/TelaRespiracaoProfunda" element={<RoutesPrivate><TelaRespiracaoProfunda /></RoutesPrivate>}/>
+                        <Route path="/TelaRespiracaoSuperficial" element={<RoutesPrivate><TelaRespiracaoSuperficial /></RoutesPrivate>}/>
+                        <Route path="/TelaRelaxamento" element={<RoutesPrivate><TelaRelaxamento /></RoutesPrivate>}/>
+                        <Route path="/TelaEscolhaExercicio" element={<RoutesPrivate><TelaEscolhaExercicio /></RoutesPrivate>}/>
+                        <Route path="/TelaMais" element={<RoutesPrivate><TelaMais /></RoutesPrivate>}/>
+                        <Route path="/TelaAtividade" element={<RoutesPrivate><TelaAtividade /></RoutesPrivate>}/>
+                        <Route path="/TelaProgresso" element={<RoutesPrivate><TelaProgresso /></RoutesPrivate>}/>
+                        
+                        
+                        
+                        
+                        
 
-                        <RoutesPrivate path="/TelaRespiracaoProfunda" ><TelaRespiracaoProfunda /> </RoutesPrivate>
-                        <RoutesPrivate path="/TelaRespiracaoSuperficial" ><TelaRespiracaoSuperficial /> </RoutesPrivate>
-                        <RoutesPrivate path="/TelaRelaxamento" ><TelaRelaxamento /> </RoutesPrivate>
-                        <RoutesPrivate path="/TelaEscolhaExercicio" ><TelaEscolhaExercicio /> </RoutesPrivate>
-                        <RoutesPrivate path="/TelaMais" ><TelaMais /> </RoutesPrivate>
-                        <RoutesPrivate path="/TelaAtividade" ><TelaAtividade /></RoutesPrivate>
-                        <RoutesPrivate path="/TelaProgresso" ><TelaProgresso /> </RoutesPrivate>
 
 
-
-                    </Switch>
+                    </Routes>
+                    </BrowserRouter>
                 </StoreProvider>
 
 
-            </div>
-
-        </Router>
+            
 
         )
     }
 }
 
 
-export default Routes;
+export default Rotas;

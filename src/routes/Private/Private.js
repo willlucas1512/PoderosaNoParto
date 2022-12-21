@@ -1,26 +1,19 @@
 import React, { useContext } from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Navigate} from 'react-router-dom';
 import StoreContext from './../../componentes/Store/Context';
 
-const RoutesPrivate = ({ children, ...rest }) => {
+
+const RoutesPrivate = ({ children }) => {
   const { token } = useContext(StoreContext);
-
-  return (
-    <Route
-      {...rest}
-      render={({ location }) => (token && token !== null)
-        ? (children)
-        : (<Redirect
-          to={{
-            pathname: "/",
-            state: { from: location },
-          }}
+  
+  return ((token && token !== null) 
+    ? (children)
+     : <Navigate to="/"
+    
+    />);
+};
 
 
-        />)
-      }
-    />
-  )
-}
+
 
 export default RoutesPrivate;

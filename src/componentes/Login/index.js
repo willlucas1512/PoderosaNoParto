@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import * as S from './styles.js'
 import StoreContext from './../Store/Context'
 import * as IoIcons from 'react-icons/io5';
@@ -18,7 +18,7 @@ function Login() {
     const { setCpf } = useContext(StoreContext);
     const { setNomeUsuario } = useContext(StoreContext);
     const [cpfLogin, setCpfLogin] = useState(null);
-    const history = useHistory();
+    const navigate  = useNavigate();
 
     //Função onChange atualizaos valores dos inputs 
     function onChange(event) {
@@ -65,7 +65,7 @@ function Login() {
                     setNomeUsuario(response.data.nomeUsuario)
                     setIdUsuario(response.data.idUsuario)
                     setValues(initialState)
-                    return history.push('/TelaAtividade')
+                    return navigate('/TelaAtividade')
 
 
                 })
