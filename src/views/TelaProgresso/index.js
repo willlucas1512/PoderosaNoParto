@@ -1,11 +1,9 @@
 import React from 'react';
 import * as S from './styles.js'
-
-
-//nossos componentes
 import Header from '../../componentes/Header/HeaderTelasMenu'
 import Footer from '../../componentes/Footer'
 import ConteudoTelaProgresso from '../../componentes/ConteudoTelaProgresso'
+import GlobalVertical from '../../styles/globalVertical.js';
 
 function TelaProgresso() {
     return (
@@ -15,6 +13,7 @@ function TelaProgresso() {
             <Header />
             <ConteudoTelaProgresso />
             <Footer />
+           
         </S.Container>
 
 

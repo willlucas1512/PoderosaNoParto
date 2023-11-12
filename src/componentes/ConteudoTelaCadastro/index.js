@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import * as S from './styles.js'
 import api from '../../services/api';
 import * as IoIcons from 'react-icons/io5';
-import Cep from "react-simple-cep-mask";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
 function ConteudoTelaCadastro() {
@@ -11,6 +10,7 @@ function ConteudoTelaCadastro() {
         id: null,
         nome: "",
         senha: "",
+        cep:"",
         confirmarSenha: "",
         sexo: "",
         cep: "",
@@ -22,7 +22,7 @@ function ConteudoTelaCadastro() {
     const [dataNasc, setDataNasc] = useState(null);
     const [ultMest, setUltMest] = useState(null);
     const [cpfCadastro, setCpfCadastro] = useState(null);
-    const [cep, setCep] = useState("");
+
 
     const handleInputChange = event => {
         const { name, value } = event.target;
@@ -56,7 +56,7 @@ function ConteudoTelaCadastro() {
             cpf: cpfCadastro,
             senha: user.senha,
             sexo: user.sexo,
-            cep: cep,
+            cep: user.cep,
             email: user.email,
             raca: user.raca,
             dataNasc: dataNasc,
@@ -224,11 +224,13 @@ function ConteudoTelaCadastro() {
                         </S.Form1>
 
                         <S.Form2 >
-                            <Cep
+                            <input
                                 className="inputCadastro"
-                                value={cep}
-                                placeholder="Cep"
-                                onChange={(cep) => setCep(cep)}
+                                placeholder="CEP"
+                                id="cep"
+                                name="cep"
+                                required value={user.cep}
+                                onChange={handleInputChange}
                             />
 
                             < input type="text"

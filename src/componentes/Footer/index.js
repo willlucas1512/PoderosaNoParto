@@ -1,24 +1,22 @@
 import React from 'react';
-import './styles.css'
+import * as S from './styles.js';
 
-import 'react-bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 function Footer() {
     return (
 
 
-        <footer className="footer mt-auto py-3" >
+        <S.Footer >
 
-            <div className="conteudo">
+          <S.Menu>
                 <a href="/TelaPoliticaDePrivacidade">Politica de Privacidade</a>
                 <span className="dividir" />
                 <a href="/TelaTermosECondicoes">Termos e Condições</a>
+          </S.Menu>
+      
 
-            </div>
-
-        </footer>
+        </S.Footer>
 
     )
 
